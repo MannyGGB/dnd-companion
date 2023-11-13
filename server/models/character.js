@@ -5,7 +5,8 @@ const characterSchema = new Schema([
   {
     profile: {
       characterName: String,
-      class: String,
+      race: String,
+      characterClass: String,
       level: Number,
       experiencePoints: Number,
     },
