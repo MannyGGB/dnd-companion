@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../CSS/dice.css";
 
 export default function Dice() {
   const [numberOfDice, setNumberOfDice] = useState(1);
@@ -64,7 +65,9 @@ export default function Dice() {
           <option value={100}>d100</option>
         </select>
       </div>
-      <button onClick={handleRoll}>Roll Dice</button>
+      <button id="dice-button" onClick={handleRoll}>
+        Roll Dice
+      </button>
       {rollResult !== null && <p>Result: {rollResult}</p>}
     </main>
   );
