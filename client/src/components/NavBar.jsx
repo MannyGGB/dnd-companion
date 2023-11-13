@@ -1,8 +1,8 @@
-import book from "./images/book.png";
-import dice from "./images/dice.png";
-import face from "./images/face.png";
-import home from "./images/home.png";
-import person from "./images/person.png";
+import book from "../images/book.png"
+import dice from "../images/dice.png";
+import face from "../images/face.png";
+import home from "../images/home.png";
+import person from "../images/person.png";
 
 export default function NavBar() {
   return (
