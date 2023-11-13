@@ -1,22 +1,26 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
-const logOut = () => {
-	const { logout } = useAuth0();
-	const { user } = useAuth0();
+function logOut() {
+	const { logout, user } = useAuth0();
+
+	function customLogout() {
+		const text = confirm("Are you sure want to log out?");
+		if (text) {
+			logout({ logoutParameters: { returnTo: window.location.origin } });
+		}
+	}
 
 	return (
 		<>
-			<img
+			{/* <img
 				id="userPicture"
 				src={user.picture}
 				alt={user.name}
-				onClick={() =>
-					logout({ logoutParameters: { returnTo: window.location.origin } })
-				}
-			/>
+				onClick={customLogout}
+			/> */}
 		</>
 	);
-};
+}
 
 export default logOut;

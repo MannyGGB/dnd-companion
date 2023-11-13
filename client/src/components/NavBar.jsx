@@ -3,9 +3,11 @@ import dice from "../images/dice.png";
 import face from "../images/face.png";
 import home from "../images/home.png";
 import person from "../images/person.png";
+import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
+  	const { user, isAuthenticated } = useAuth0();
   return (
     <div className="NavBar">
       <Link to="/">
@@ -21,7 +23,10 @@ export default function NavBar() {
         <img src={book} alt="Journal" />
       </Link>
       <Link to="/profile">
-        <img src={person} alt="Profile" />
+        	{isAuthenticated && (
+				<img id="userPicture" src={user.picture} alt={user.name} />
+			)}
+			{!isAuthenticated && <img src={person} alt="Account" />}
       </Link>
     </div>
   );
