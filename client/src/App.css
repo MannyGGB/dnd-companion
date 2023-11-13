@@ -1,0 +1,46 @@
+html {
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.NavBar,
+.TopBar {
+  max-width: 400px;
+  min-width: 360px;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  background-color: rgb(197, 197, 197);
+  padding: 10px 8px;
+  margin: 0;
+}
+
+.TopBar {
+  justify-content: space-between;
+  align-items: start;
+}
+
+#top-bar-profie {
+  width: 30px;
+}
+
+#logo {
+  width: 40px;
+}
+#dice {
+  border: 1px sold black;
+  background-color: white;
+  border-radius: 10px;
+}
