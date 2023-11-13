@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function logOut() {
-	const { logout, user } = useAuth0();
+	const { logout } = useAuth0();
 
 	function customLogout() {
 		const text = confirm("Are you sure want to log out?");
@@ -13,6 +13,7 @@ function logOut() {
 
 	return (
 		<>
+		<button onClick={customLogout}>Log out</button>
 			{/* <img
 				id="userPicture"
 				src={user.picture}
