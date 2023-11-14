@@ -25,7 +25,7 @@ app.get("/character", async (request, response) => {
   }
 });
 
-app.get("/form", async (request, response) => {
+app.get("/form/races", async (request, response) => {
   const API = `https://api.open5e.com/v1/races/?format=json`;
   const res = await axios.get(API);
 

@@ -18,37 +18,31 @@ const AbilityScores = ({ characterData, handleAbilityScoreRoll }) => {
     <div>
       <h2>Ability Scores</h2>
       <div>
-        <button onClick={(e) => rollAbilityScore(e, "strength")}>
-          Roll Strength
-        </button>
+        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
         <span>Strength: {strength}</span>
       </div>
       <div>
-        <button onClick={() => rollAbilityScore("dexterity")}>
-          Roll Dexterity
-        </button>
+        <button onClick={(e) => rollAbilityScore(e, "dexterity")}>Roll</button>
         <span>Dexterity: {dexterity}</span>
       </div>
       <div>
-        <button onClick={() => rollAbilityScore("constitution")}>
-          Roll Constitution
+        <button onClick={(e) => rollAbilityScore(e, "constitution")}>
+          Roll
         </button>
         <span>Constitution: {constitution}</span>
       </div>
       <div>
-        <button onClick={() => rollAbilityScore("intelligence")}>
-          Roll Intelligence
+        <button onClick={(e) => rollAbilityScore(e, "intelligence")}>
+          Roll
         </button>
         <span>Intelligence: {intelligence}</span>
       </div>
       <div>
-        <button onClick={() => rollAbilityScore("wisdom")}>Roll Wisdom</button>
+        <button onClick={(e) => rollAbilityScore(e, "wisdom")}>Roll</button>
         <span>Wisdom: {wisdom}</span>
       </div>
       <div>
-        <button onClick={() => rollAbilityScore("charisma")}>
-          Roll Charisma
-        </button>
+        <button onClick={(e) => rollAbilityScore(e, "charisma")}>Roll</button>
         <span>Charisma: {charisma}</span>
       </div>
     </div>
