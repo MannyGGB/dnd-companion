@@ -8,7 +8,7 @@ import SavingThrows from "./CharacterFormComp/SavingThrow";
 import Skills from "./CharacterFormComp/Skills";
 import CharacterTraits from "./CharacterFormComp/CharacterTraits";
 import Spells from "./CharacterFormComp/Spells";
-
+import "../CSS/character.css";
 const CharacterForm = () => {
   const initialCharacterState = {
     profile: {
@@ -175,44 +175,46 @@ const CharacterForm = () => {
   };
 
   return (
-    <form>
-      <ProfileSection
-        characterData={characterData}
-        handleProfileChange={handleProfileChange}
-      />
-      <AbilityScores
-        characterData={characterData}
-        handleAbilityScoreRoll={handleAbilityScoreRoll}
-      />
-      <PhysicalAttributes
-        physicalAttributes={characterData.physicalAttributes}
-        handlePhysicalAttributesChange={handlePhysicalAttributesChange}
-      />
-      <Attacks
-        attacks={characterData.attacks}
-        handleAttacksChange={handleAttacksChange}
-      />
-      <Spells
-        spells={characterData.spells}
-        handleSpellsChange={handleSpellsChange}
-      />
-      <Inventory
-        inventory={characterData.inventory}
-        handleInventoryChange={handleInventoryChange}
-      />
-      <SavingThrows
-        savingThrows={characterData.savingThrows}
-        handleSavingThrowsChange={handleSavingThrowsChange}
-      />
-      <Skills
-        skills={characterData.skills}
-        handleSkillsChange={handleSkillsChange}
-      />
-      <CharacterTraits
-        traits={characterData.traits}
-        handleTraitsChange={handleTraitsChange}
-      />
-    </form>
+    <main id="character-main">
+      <form>
+        <ProfileSection
+          characterData={characterData}
+          handleProfileChange={handleProfileChange}
+        />
+        <AbilityScores
+          characterData={characterData}
+          handleAbilityScoreRoll={handleAbilityScoreRoll}
+        />
+        <PhysicalAttributes
+          physicalAttributes={characterData.physicalAttributes}
+          handlePhysicalAttributesChange={handlePhysicalAttributesChange}
+        />
+        <Attacks
+          attacks={characterData.attacks}
+          handleAttacksChange={handleAttacksChange}
+        />
+        <Spells
+          spells={characterData.spells}
+          handleSpellsChange={handleSpellsChange}
+        />
+        <Inventory
+          inventory={characterData.inventory}
+          handleInventoryChange={handleInventoryChange}
+        />
+        <SavingThrows
+          savingThrows={characterData.savingThrows}
+          handleSavingThrowsChange={handleSavingThrowsChange}
+        />
+        <Skills
+          skills={characterData.skills}
+          handleSkillsChange={handleSkillsChange}
+        />
+        <CharacterTraits
+          traits={characterData.traits}
+          handleTraitsChange={handleTraitsChange}
+        />
+      </form>
+    </main>
   );
 };
 
