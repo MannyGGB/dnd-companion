@@ -5,7 +5,8 @@ const Attacks = ({ attacks, handleAttacksChange }) => {
     handleAttacksChange(updatedAttacks);
   };
 
-  const addNewAttack = () => {
+  const addNewAttack = (e) => {
+    e.preventDefault();
     handleAttacksChange([
       ...attacks,
       { attackName: "", attackBonus: 0, damageType: "" },

@@ -5,7 +5,8 @@ const Spells = ({ spells, handleSpellsChange }) => {
     handleSpellsChange(updatedSpells);
   };
 
-  const addNewSpell = () => {
+  const addNewSpell = (e) => {
+    e.preventDefault();
     handleSpellsChange([...spells, { spellName: "", spellLevel: 0 }]);
   };
 
@@ -40,7 +41,7 @@ const Spells = ({ spells, handleSpellsChange }) => {
               }
             />
           </label>
-          <button onClick={() => removeSpell(index)}>Remove</button>
+          <button onClick={(e) => removeSpell(index)}>Remove</button>
         </div>
       ))}
       <button onClick={addNewSpell}>Add Spell</button>

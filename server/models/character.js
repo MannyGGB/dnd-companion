@@ -71,6 +71,10 @@ const characterSchema = new Schema([
       attackBonus: Number,
       damageType: String,
     },
+    spells: {
+      spellName: String,
+      spellLevel: Number,
+    },
     inventory: {
       equipment: String,
       cp: Number,
