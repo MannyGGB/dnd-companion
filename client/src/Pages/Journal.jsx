@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import moment from "moment";
 const date = moment();
+import axios from "axios";
 import "../CSS/journal.css";
 
 export default function Journal() {
@@ -8,7 +9,11 @@ export default function Journal() {
 
   const [entry, setEntry] = useState("");
   const [submission, setSubmission] = useState({});
-  const [submissions, getSubmissions] = useState([]);
+  const [submissions, setSubmissions] = useState([]);
+
+  useEffect(() => {
+    getSubmissions();
+  }, []);
 
   const writtenTale = {
     text: "",
@@ -18,7 +23,6 @@ export default function Journal() {
 
   function handleChange(event) {
     setEntry(event.target.value);
-    console.log(entry);
   }
 
   function handleSubmit(event) {
@@ -34,19 +38,20 @@ export default function Journal() {
       text: tales.text,
     };
     setSubmission(newEntry);
-    console.log(submission);
+    addSubmission();
+    getSubmissions();
   }
 
-  // async function addSubmission() {
-  //   const API = ``;
-  //   await axios.put(API, submission);
-  // }
+  async function addSubmission() {
+    const API = `http://localhost:8080/journal`;
+    await axios.post(API, submission);
+  }
 
-  // async function getSubmissions() {
-  //   const API = ``;
-  //   const res = await axios.get(API);
-  //   getSubmissions(res.data);
-  // }
+  async function getSubmissions() {
+    const API = `http://localhost:8080/journal`;
+    const res = await axios.get(API);
+    setSubmissions(res.data);
+  }
 
   return (
     <main id="journal-main">
@@ -59,13 +64,12 @@ export default function Journal() {
         <button>Submit</button>
       </form>
 
-      {/* {submissions[0].text &&
-        submissions.map((sub) => (
-          <div className="submissions">
-            <h3>{sub.date}</h3>
-            <p>{sub.text}</p>
-          </div>
-        ))} */}
+      {submissions.map((sub) => (
+        <div className="submissions">
+          <h3>{sub.date}</h3>
+          <p>{sub.text}</p>
+        </div>
+      ))}
     </main>
   );
 }

@@ -6,9 +6,11 @@ const ProfileSection = ({ characterData, handleProfileChange }) => {
     characterData.profile;
 
   const [races, setRaces] = useState([]);
+  const [classes, setClasses] = useState([]);
 
   useEffect(() => {
     getRaces();
+    getClasses();
   }, []);
 
   async function getRaces() {
@@ -17,7 +19,11 @@ const ProfileSection = ({ characterData, handleProfileChange }) => {
     setRaces(res.data);
   }
 
-  // get.class function
+  async function getClasses() {
+    const API = `http://localhost:8080/form/classes`;
+    const res = await axios.get(API);
+    setClasses(res.data);
+  }
 
   return (
     <div>
@@ -40,15 +46,15 @@ const ProfileSection = ({ characterData, handleProfileChange }) => {
           </option>
         ))}
       </select>
-      <label>
-        Class:
-        <input
-          type="text" // would this be a drop down so we can take it form the API?
-          name="class"
-          value={characterClass}
-          onChange={handleProfileChange}
-        />
-      </label>
+      <label>Class:</label>
+      <select onChange={handleProfileChange}>
+        <option value=""></option>
+        {classes.map((characterClass, index) => (
+          <option value={characterClass} key={index}>
+            {characterClass}
+          </option>
+        ))}
+      </select>
       <label>
         Level:
         <input
