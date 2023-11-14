@@ -8,7 +8,7 @@ export default function Profile() {
 	const { user, isAuthenticated } = useAuth0();
 
 	return (
-		<>
+		<main>
 			{isAuthenticated && (
 				<div className="profile">
 					<img className="profilePicture" src={user.picture} alt={user.name} />
@@ -17,13 +17,13 @@ export default function Profile() {
 					<LogoutButton />
 				</div>
 			)}
-			{!isAuthenticated && 
-			<div className="profile">
-				<p>Log in to your account to save and update your character!</p>
-			<LoginButton />
-			</div>
-			}
-		</>
+			{!isAuthenticated && (
+				<div className="profile">
+					<p>Log in to your account to save and update your character!</p>
+					<LoginButton />
+				</div>
+			)}
+		</main>
 		// ProfilePage
 	);
 }

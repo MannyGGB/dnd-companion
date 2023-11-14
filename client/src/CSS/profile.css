@@ -1,9 +1,5 @@
-.profile {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: center;
-	text-align: center;
+main {
+	justify-content: center;
 }
 
 .profilePicture {
@@ -23,6 +19,6 @@ p {
 	margin-top: 10px;
 }
 
-h2{
+h2 {
 	margin-bottom: 0px;
 }
