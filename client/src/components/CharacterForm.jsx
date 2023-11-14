@@ -9,6 +9,11 @@ import Skills from "./CharacterFormComp/Skills";
 import CharacterTraits from "./CharacterFormComp/CharacterTraits";
 import Spells from "./CharacterFormComp/Spells";
 import "../CSS/character.css";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+
 const CharacterForm = () => {
   const initialCharacterState = {
     profile: {
@@ -176,44 +181,144 @@ const CharacterForm = () => {
 
   return (
     <main id="character-main">
-      <form>
-        <ProfileSection
-          characterData={characterData}
-          handleProfileChange={handleProfileChange}
-        />
-        <AbilityScores
-          characterData={characterData}
-          handleAbilityScoreRoll={handleAbilityScoreRoll}
-        />
-        <PhysicalAttributes
-          physicalAttributes={characterData.physicalAttributes}
-          handlePhysicalAttributesChange={handlePhysicalAttributesChange}
-        />
-        <Attacks
-          attacks={characterData.attacks}
-          handleAttacksChange={handleAttacksChange}
-        />
-        <Spells
-          spells={characterData.spells}
-          handleSpellsChange={handleSpellsChange}
-        />
-        <Inventory
-          inventory={characterData.inventory}
-          handleInventoryChange={handleInventoryChange}
-        />
-        <SavingThrows
-          savingThrows={characterData.savingThrows}
-          handleSavingThrowsChange={handleSavingThrowsChange}
-        />
-        <Skills
-          skills={characterData.skills}
-          handleSkillsChange={handleSkillsChange}
-        />
-        <CharacterTraits
-          traits={characterData.traits}
-          handleTraitsChange={handleTraitsChange}
-        />
-      </form>
+      <div className="form-component">
+        <Accordion>
+          <AccordionSummary
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            expandIcon="+"
+          >
+            <Typography>Character</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <ProfileSection
+              characterData={characterData}
+              handleProfileChange={handleProfileChange}
+            />
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            expandIcon="+"
+          >
+            <Typography>Ability Scores</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <AbilityScores
+              characterData={characterData}
+              handleAbilityScoreRoll={handleAbilityScoreRoll}
+            />
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            expandIcon="+"
+          >
+            <Typography>Physical Attributes</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <PhysicalAttributes
+              physicalAttributes={characterData.physicalAttributes}
+              handlePhysicalAttributesChange={handlePhysicalAttributesChange}
+            />
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            expandIcon="+"
+          >
+            <Typography>Attacks</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Attacks
+              attacks={characterData.attacks}
+              handleAttacksChange={handleAttacksChange}
+            />
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion>
+          <AccordionSummary
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            expandIcon="+"
+          >
+            <Typography>Attacks</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Spells
+              spells={characterData.spells}
+              handleSpellsChange={handleSpellsChange}
+            />
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            expandIcon="+"
+          >
+            <Typography>Inventory</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Inventory
+              inventory={characterData.inventory}
+              handleInventoryChange={handleInventoryChange}
+            />
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            expandIcon="+"
+          >
+            <Typography>Saving Throws</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <SavingThrows
+              savingThrows={characterData.savingThrows}
+              handleSavingThrowsChange={handleSavingThrowsChange}
+            />
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            expandIcon="+"
+          >
+            <Typography>Skills</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Skills
+              skills={characterData.skills}
+              handleSkillsChange={handleSkillsChange}
+            />
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            expandIcon="+"
+          >
+            <Typography>Character Traits</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <CharacterTraits
+              traits={characterData.traits}
+              handleTraitsChange={handleTraitsChange}
+            />
+          </AccordionDetails>
+        </Accordion>
+      </div>
     </main>
   );
 };
