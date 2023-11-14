@@ -5,17 +5,26 @@ const ProfileSection = ({ characterData, handleProfileChange }) => {
   const { characterName, characterClass, level, race, experiencePoints } =
     characterData.profile;
 
-  const [races, setRaces] = useState({});
+  const [races, setRaces] = useState([]);
+
+  useEffect(() => {
+    getRaces();
+  }, []);
 
   async function getRaces() {
     const API = `http://localhost:8080/form/races`;
     const res = await axios.get(API);
     setRaces(res.data);
+    console.log(races);
   }
+
   // get.class function
 
   return (
     <div>
+      {races.map((race) => {
+        <h1>{race}</h1>;
+      })}
       <h2>Character Profile</h2>
       <label>
         Character Name:
@@ -27,10 +36,12 @@ const ProfileSection = ({ characterData, handleProfileChange }) => {
         />
       </label>
       <label>Race:</label>
-      <select>
-        <option name="race" value={race} onChange={handleProfileChange}>
-          {races.name}
-        </option>
+      <select onChange={handleProfileChange}>
+        {races.map((race) => {
+          <option name={race} value={race}>
+            {race}
+          </option>;
+        })}
       </select>
       <label>
         Class:
