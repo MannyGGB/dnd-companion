@@ -4,48 +4,54 @@ export default function Home() {
   return (
     <main>
       <div className="home-info">
-        <h3>
-          Welcome to DnD Companion! Dungeons and Dragrons (otherwise known as
-          DnD) is a...Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quasi rerum laboriosam atque pariatur et.
-        </h3>
+        <h3>Welcome to DnD Companion!</h3>
+        <h3>All you need to get started and playing Dungeons and Dragrons.</h3>
       </div>
-      <div className="home-video"></div>
+
       <div className="home-info">
-        <h2>Useful information</h2>
-        <ul>
+        <h2>Getting Started:</h2>
+        <ol>
+          <li>Log in and create a Profile.</li>
+          <li>Watch the video below to get an understanding of DnD.</li>
+          <li>Go to Character Creation page to create your character.</li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit cupiditate
-            illum quaerat id
+            Check out a list of spells{" "}
+            <a href="http://dnd5e.wikidot.com/spells">here.</a>
           </li>
-          <li>
-            Debitis incidunt autem ea esse nobis facilis repudiandae voluptate!
-          </li>
-          <li>
-            Consequuntur ipsa aliquam, aperiam natus voluptate nulla praesentium
-          </li>
-          <li>
-            Blanditiis labore dolores velit, aperiam cumque, voluptatibus amet
-            praesentium
-          </li>
-        </ul>
+          <li>Get playing!</li>
+        </ol>
       </div>
+
+      <div className="home-video">
+        <iframe
+          width="320"
+          height="200"
+          src="https://www.youtube.com/embed/GM_3e8iVMmQ?si=qWsfJI9_FXQo96YR"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
+      </div>
+
       <div className="about">
-        <div className="team-member">
-          <img src="/" alt="Nellie" />
-          <p>Nellie</p>
-        </div>
-        <div className="team-member">
-          <img src="/" alt="Manny" />
-          <p>Manny</p>
-        </div>
-        <div className="team-member">
-          <img src="/" alt="Stephen" />
-          <p>Stephen</p>
-        </div>
-        <div className="team-member">
-          <img src="/" alt="Max" />
-          <p>Max</p>
+        <h3>The team</h3>
+        <div className="members">
+          <div className="team-member">
+            <img src="/" alt="Nellie" />
+            <p>Nellie</p>
+          </div>
+          <div className="team-member">
+            <img src="/" alt="Manny" />
+            <p>Manny</p>
+          </div>
+          <div className="team-member">
+            <img src="/" alt="Stephen" />
+            <p>Stephen</p>
+          </div>
+          <div className="team-member">
+            <img src="/" alt="Max" />
+            <p>Max</p>
+          </div>
         </div>
       </div>
     </main>

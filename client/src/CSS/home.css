@@ -1,0 +1,18 @@
+
+.members {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.home-info ol{
+  text-align: left;
+}
+
+.home-info li {
+  margin-bottom: .5rem;
+}
+
+iframe {
+  border: 1px solid black;
+  border-radius: 12px;
+}
