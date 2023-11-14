@@ -53,6 +53,24 @@ export default function Journal() {
     setSubmissions(res.data);
   }
 
+  async function updateSubmission(event) {
+    event.preventDefault();
+    const API = `http://localhost:8080/journal/${submission._id}`;
+    await axios.put(API, submission);
+    setSubmissions(res.data);
+  }
+
+  async function deleteSubmission(id) {
+    const check = confirm("Are you sure you want to delete?");
+    if (check) {
+      const API = `http://localhost:8080/journal/${id}`;
+      await axios.delete(API);
+      getSubmissions();
+    } else {
+      alert("Watch out!");
+    }
+  }
+
   return (
     <main id="journal-main">
       <h3>
@@ -68,6 +86,8 @@ export default function Journal() {
         <div className="submissions">
           <h3>{sub.date}</h3>
           <p>{sub.text}</p>
+          <button>Edit</button>
+          <button onClick={() => deleteSubmission(sub._id)}>Delete</button>
         </div>
       ))}
     </main>
