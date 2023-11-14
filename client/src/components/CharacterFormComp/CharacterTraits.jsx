@@ -1,11 +1,11 @@
-const Traits = ({ handleTraitChange }) => {
+const CharacterTraits = ({ handleTraitChange }) => {
   const handleTraitValueChange = (trait, value) => {
     handleTraitChange(trait, value);
   };
 
   return (
     <div>
-      <h2>Traits</h2>
+      <h2>CharacterTraits</h2>
       <label>
         Languages:
         <input
@@ -63,4 +63,4 @@ const Traits = ({ handleTraitChange }) => {
   );
 };
 
-export default Traits;
+export default CharacterTraits;

@@ -2,7 +2,8 @@ const AbilityScores = ({ characterData, handleAbilityScoreRoll }) => {
   const { strength, dexterity, constitution, intelligence, wisdom, charisma } =
     characterData.abilityScores;
 
-  const rollAbilityScore = (ability) => {
+  const rollAbilityScore = (e, ability) => {
+    e.preventDefault();
     // trying with DnD rules as written, roll 4 minus the lowest
     const diceValues = Array.from(
       { length: 4 },
@@ -17,7 +18,7 @@ const AbilityScores = ({ characterData, handleAbilityScoreRoll }) => {
     <div>
       <h2>Ability Scores</h2>
       <div>
-        <button onClick={() => rollAbilityScore("strength")}>
+        <button onClick={(e) => rollAbilityScore(e, "strength")}>
           Roll Strength
         </button>
         <span>Strength: {strength}</span>

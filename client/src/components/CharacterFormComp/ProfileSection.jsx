@@ -1,6 +1,18 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 const ProfileSection = ({ characterData, handleProfileChange }) => {
   const { characterName, characterClass, level, race, experiencePoints } =
     characterData.profile;
+
+  const [races, setRaces] = useState({});
+
+  async function getRaces() {
+    const API = `http://localhost:8080/form/races`;
+    const res = await axios.get(API);
+    setRaces(res.data);
+  }
+  // get.class function
 
   return (
     <div>
@@ -14,15 +26,12 @@ const ProfileSection = ({ characterData, handleProfileChange }) => {
           onChange={handleProfileChange}
         />
       </label>
-      <label>
-        Race:
-        <input
-          type="text" // would this be a drop down, so we can take it from the API?
-          name="race"
-          value={race}
-          onChange={handleProfileChange}
-        />
-      </label>
+      <label>Race:</label>
+      <select>
+        <option name="race" value={race} onChange={handleProfileChange}>
+          {races.name}
+        </option>
+      </select>
       <label>
         Class:
         <input
