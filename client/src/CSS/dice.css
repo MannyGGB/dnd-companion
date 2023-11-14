@@ -1,18 +1,1 @@
-main {
-  height: 40vh;
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 2rem auto;
-  text-align: center;
-}
 
-#dice-button {
-  width: 6rem;
-  margin: 1rem auto;
-}
-
-label {
-  margin-right: 1rem;
-}
