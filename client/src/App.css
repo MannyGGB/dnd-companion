@@ -67,8 +67,10 @@ body {
 }
 
 #logo {
-  width: 40px;
+	width: 40px;
+	border-radius: 20px;
 }
+
 #dice {
   border: 1px sold black;
   background-color: white;
@@ -76,6 +78,7 @@ body {
 }
 
 #userPicture {
+
   width: 30px;
   border-radius: 20px;
   /* border: solid 1px black; */
