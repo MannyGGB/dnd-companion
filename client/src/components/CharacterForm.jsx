@@ -6,7 +6,8 @@ import Attacks from "./CharacterFormComp/Attacks";
 import Inventory from "./CharacterFormComp/Inventory";
 import SavingThrows from "./CharacterFormComp/SavingThrow";
 import Skills from "./CharacterFormComp/Skills";
-// import Traits from "./CharacterFormComp/Traits"; we need to rename traits
+import CharacterTraits from "./CharacterFormComp/CharacterTraits";
+import Spells from "./CharacterFormComp/Spells";
 
 const CharacterForm = () => {
   const initialCharacterState = {
@@ -37,6 +38,13 @@ const CharacterForm = () => {
       deathSavesFail: 0,
     },
     attacks: [{ attackName: "", attackBonus: 0, damageType: "" }],
+
+    spells: [
+      {
+        spellName: "",
+        spellLevel: 0,
+      },
+    ],
     inventory: {
       equipment: "",
       cp: 0,
@@ -45,6 +53,7 @@ const CharacterForm = () => {
       gp: 0,
       pp: 0,
     },
+
     savingThrows: {
       strength: 0,
       dexterity: 0,
@@ -87,6 +96,7 @@ const CharacterForm = () => {
   const [characterData, setCharacterData] = useState(initialCharacterState);
 
   const handleProfileChange = (event) => {
+    event.preventDefault();
     const { name, value } = event.target;
     setCharacterData((prevData) => ({
       ...prevData,
@@ -157,6 +167,13 @@ const CharacterForm = () => {
     }));
   };
 
+  const handleSpellsChange = (updatedSpells) => {
+    setCharacterData((prevData) => ({
+      ...prevData,
+      spells: updatedSpells,
+    }));
+  };
+
   return (
     <form>
       <ProfileSection
@@ -175,6 +192,10 @@ const CharacterForm = () => {
         attacks={characterData.attacks}
         handleAttacksChange={handleAttacksChange}
       />
+      <Spells
+        spells={characterData.spells}
+        handleSpellsChange={handleSpellsChange}
+      />
       <Inventory
         inventory={characterData.inventory}
         handleInventoryChange={handleInventoryChange}
@@ -187,7 +208,7 @@ const CharacterForm = () => {
         skills={characterData.skills}
         handleSkillsChange={handleSkillsChange}
       />
-      <Traits
+      <CharacterTraits
         traits={characterData.traits}
         handleTraitsChange={handleTraitsChange}
       />

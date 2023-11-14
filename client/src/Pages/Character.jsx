@@ -1,8 +1,9 @@
+import CharacterForm from "../components/CharacterForm";
+
 export default function Character() {
   return (
-    <div>Character</div>
-    // TopBar
-    // CreateCharacter
-    // NavBar
-  )
+    <div>
+      <CharacterForm />
+    </div>
+  );
 }
