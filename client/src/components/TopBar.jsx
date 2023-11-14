@@ -1,4 +1,4 @@
-import logo from "../images/logoipsum.svg";
+import logo from "../images/logo.png";
 import { Link } from "react-router-dom";
 
 export default function TopBar() {

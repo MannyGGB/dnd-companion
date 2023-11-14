@@ -13,7 +13,7 @@ function logOut() {
 
 	return (
 		<>
-		<button onClick={customLogout}>Log out</button>
+		<button className="logButtons" onClick={customLogout}>Log out</button>
 			{/* <img
 				id="userPicture"
 				src={user.picture}

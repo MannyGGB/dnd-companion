@@ -38,7 +38,9 @@ body {
 
 #logo {
 	width: 40px;
+	border-radius: 20px;
 }
+
 #dice {
 	border: 1px sold black;
 	background-color: white;
