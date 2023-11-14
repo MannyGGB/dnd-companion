@@ -1,6 +1,7 @@
 import { useState } from "react";
 import moment from "moment";
 const date = moment();
+import "../CSS/journal.css";
 
 export default function Journal() {
   const currentDate = date.format("D/MM/YYYY");
@@ -48,7 +49,7 @@ export default function Journal() {
   // }
 
   return (
-    <main>
+    <main id="journal-main">
       <h3>
         Use the journal to keep track of your journey through your sessions...
       </h3>
