@@ -44,7 +44,7 @@ body {
   justify-content: space-around;
   align-items: center;
   background-color: rgb(197, 197, 197);
-  padding: 14px 10px;
+  padding: 10px 0px;
   margin: 0;
 }
 
@@ -76,7 +76,7 @@ body {
 }
 
 #userPicture {
-  width: 40px;
+  width: 30px;
   border-radius: 20px;
   /* border: solid 1px black; */
 }
