@@ -1,18 +1,23 @@
-
 .members {
-  display: flex;
-  justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
 
-.home-info ol{
-  text-align: left;
+.home-info ol {
+	text-align: left;
 }
 
 .home-info li {
-  margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 }
 
 iframe {
-  border: 1px solid black;
-  border-radius: 12px;
+	border: 1px solid black;
+	border-radius: 12px;
+}
+
+.team-image {
+	max-height: 50px;
+	max-width: 50px;
+	border-radius: 25px;
 }
