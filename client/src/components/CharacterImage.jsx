@@ -1,7 +1,6 @@
 // export default function
 
 // import React, {useState} from "react";
-// import horns from "../Public/Cute_horns.jpeg"
 
 // function CharacterImage () {
 
@@ -11,14 +10,21 @@
 
 // export default CharacterImage
 
-{
-	/* <label>
-Character Image:
-<input
-  type="text"
-  name="characterName"
-  value={characterName}
-  onChange={handleProfileChange}
-/>
-</label> */
-}
+// import Cute_horns.jpeg from "../Public/Cute_horns.jpeg";
+// import ai.jpeg from "../Public/ai.jpeg";
+
+// <form>
+// <label>
+// Character image
+// </label>
+// <select>
+//   <option value="Character A">Character A</option>
+//   <option value="Character B">Character B</option>
+//   <option value="Character C">Character C</option>
+//   <option value="Character D">Character D</option>
+// </select>
+// <input type="text"
+//           name="characterName"
+//           value={characterName}
+//           onChange={handleProfileChange}/>
+// </form>
