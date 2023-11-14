@@ -33,6 +33,7 @@ const ProfileSection = ({ characterData, handleProfileChange }) => {
       </label>
       <label>Race:</label>
       <select onChange={handleProfileChange}>
+        <option value=""></option>
         {races.map((race, index) => (
           <option value={race} key={index}>
             {race}
