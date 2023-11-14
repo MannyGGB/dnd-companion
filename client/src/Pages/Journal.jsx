@@ -2,6 +2,7 @@ import { useState } from "react";
 import moment from "moment";
 const date = moment();
 import "../CSS/journal.css";
+import axios from "axios";
 
 export default function Journal() {
   const currentDate = date.format("D/MM/YYYY");
@@ -18,7 +19,6 @@ export default function Journal() {
 
   function handleChange(event) {
     setEntry(event.target.value);
-    console.log(entry);
   }
 
   function handleSubmit(event) {
@@ -34,7 +34,6 @@ export default function Journal() {
       text: tales.text,
     };
     setSubmission(newEntry);
-    console.log(submission);
   }
 
   // async function addSubmission() {
@@ -55,11 +54,11 @@ export default function Journal() {
       </h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="Write your tales below:"></label>
-        <input onChange={handleChange} type="text" />
+        <input name="text" type="text" onChange={handleChange} />
         <button>Submit</button>
       </form>
 
-      {/* {submissions[0].text &&
+      {/* {submissions.text &&
         submissions.map((sub) => (
           <div className="submissions">
             <h3>{sub.date}</h3>
