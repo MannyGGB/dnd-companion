@@ -3,9 +3,13 @@ import moment from "moment";
 const date = moment();
 import axios from "axios";
 import "../CSS/journal.css";
+import Modal from "@mui/material/Modal";
 
 export default function Journal() {
-  const currentDate = date.format("D/MM/YYYY");
+  const currentDate = date.format("DD/MM/YYYY");
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const [entry, setEntry] = useState("");
   const [submission, setSubmission] = useState({});
@@ -15,29 +19,25 @@ export default function Journal() {
     getSubmissions();
   }, []);
 
-  const writtenTale = {
+  const [tales, addTales] = useState({
     text: "",
     date: "",
-  };
-  const [tales, addTales] = useState(writtenTale);
+  });
 
   function handleChange(event) {
     setEntry(event.target.value);
   }
 
   function handleSubmit(event) {
+    getSubmissions();
     event.preventDefault();
-    addTales((writtenTale) => ({
-      ...writtenTale,
+    addTales({
       text: entry,
       date: currentDate,
-    }));
+    });
+    console.log(tales);
 
-    const newEntry = {
-      date: tales.date,
-      text: tales.text,
-    };
-    setSubmission(newEntry);
+    setSubmission(tales);
     addSubmission();
     getSubmissions();
   }
@@ -53,11 +53,11 @@ export default function Journal() {
     setSubmissions(res.data);
   }
 
-  async function updateSubmission(event) {
-    event.preventDefault();
-    const API = `http://localhost:8080/journal/${submission._id}`;
+  async function updateSubmission(id) {
+    console.log(id);
+    const API = `http://localhost:8080/journal/${id}`;
     await axios.put(API, submission);
-    setSubmissions(res.data);
+    getSubmissions();
   }
 
   async function deleteSubmission(id) {
@@ -86,10 +86,18 @@ export default function Journal() {
         <div className="submissions">
           <h3>{sub.date}</h3>
           <p>{sub.text}</p>
-          <button>Edit</button>
+          <button onClick={handleOpen}>Edit</button>
           <button onClick={() => deleteSubmission(sub._id)}>Delete</button>
         </div>
       ))}
+
+      <Modal id="modal" open={open} onClose={handleClose}>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="Edit your submission below:"></label>
+        <input onChange={handleChange} type="text" />
+        <button>Submit</button>
+      </form>
+      </Modal>
     </main>
   );
 }
