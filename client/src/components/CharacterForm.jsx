@@ -47,12 +47,11 @@ const CharacterForm = ({ API_Url }) => {
     },
     attacks: [{ attackName: "", attackBonus: 0, damageType: "" }],
 
-    spells: [
-      {
-        spellName: "",
-        spellLevel: 0,
-      },
-    ],
+    spells: [{
+      spellName: "",
+      spellLevel: 0,
+    }],
+
     inventory: {
       equipment: "",
       cp: 0,
