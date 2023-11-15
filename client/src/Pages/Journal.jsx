@@ -5,7 +5,6 @@ import axios from "axios";
 import "../CSS/journal.css";
 import Modal from "@mui/material/Modal";
 
-
 export default function Journal({ API_Url }) {
   const currentDate = date.format("DD/MM/YYYY");
   const [open, setOpen] = useState(false);
@@ -36,10 +35,9 @@ export default function Journal({ API_Url }) {
       text: entry,
       date: currentDate,
     });
-    
+
     setSubmission(tales);
-    }));
-  
+
     setSubmission(newEntry);
     addSubmission();
     getSubmissions();
@@ -95,11 +93,11 @@ export default function Journal({ API_Url }) {
       ))}
 
       <Modal id="modal" open={open} onClose={handleClose}>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="Edit your submission below:"></label>
-        <input onChange={handleChange} type="text" />
-        <button>Submit</button>
-      </form>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="Edit your submission below:"></label>
+          <input onChange={handleChange} type="text" />
+          <button>Submit</button>
+        </form>
       </Modal>
     </main>
   );
