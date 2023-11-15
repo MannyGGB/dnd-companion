@@ -32,7 +32,8 @@ export default function Journal() {
       text: entry,
       date: currentDate,
     }));
-
+// change state and delete newEntry
+// 
     const newEntry = {
       date: tales.date,
       text: tales.text,
