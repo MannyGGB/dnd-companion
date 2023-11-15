@@ -1,6 +1,6 @@
-const CharacterTraits = ({ API_Url, handleTraitChange }) => {
+const CharacterTraits = ({ API_Url, handleTraitsChange }) => {
   const handleTraitValueChange = (trait, value) => {
-    handleTraitChange(trait, value);
+    handleTraitsChange(trait, value);
   };
 
   return (

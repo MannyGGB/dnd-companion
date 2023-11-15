@@ -20,7 +20,9 @@ const CharacterForm = ({ API_Url }) => {
     profile: {
       characterName: "",
       race: "",
-      class: "",
+
+      characterClass: "",
+
       level: 1,
       experiencePoints: 0,
     },
@@ -182,9 +184,11 @@ const CharacterForm = ({ API_Url }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     const API = `http://localhost:8080/form`;
     const res = await axios.post(API, characterData);
     setCharacterData([...characterData, res.data]);
+
   };
 
   // need one for post and one for put
@@ -218,7 +222,11 @@ const CharacterForm = ({ API_Url }) => {
             </AccordionSummary>
             <AccordionDetails>
               <AbilityScores
-                characterData={characterData}
+
+                characterData={characterData.abilityScores}
+
+              
+
                 handleAbilityScoreRoll={handleAbilityScoreRoll}
               />
             </AccordionDetails>
@@ -331,7 +339,9 @@ const CharacterForm = ({ API_Url }) => {
           </Accordion>
         </div>
       </main>
+
       <button id="formbtn">Submit</button>
+
     </form>
   );
 };
