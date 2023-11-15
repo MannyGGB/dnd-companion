@@ -1,4 +1,4 @@
-const Attacks = ({ API_Url, attacks, handleAttacksChange }) => {
+const Attacks = ({ attacks, handleAttacksChange }) => {
   const handleAttackChange = (index, field, value) => {
     const updatedAttacks = [...attacks];
     updatedAttacks[index][field] = value;
