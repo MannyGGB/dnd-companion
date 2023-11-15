@@ -66,15 +66,15 @@ const characterSchema = new Schema([
       deathSavesSuccess: Number,
       deathSavesFail: Number,
     },
-    attacks: {
+    attacks: [{
       attackName: String,
       attackBonus: Number,
       damageType: String,
-    },
-    spells: {
+    }],
+    spells: [{
       spellName: String,
       spellLevel: Number,
-    },
+    }],
     inventory: {
       equipment: String,
       cp: Number,

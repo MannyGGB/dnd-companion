@@ -48,21 +48,20 @@ const CharacterForm = ({ API_Url }) => {
 		},
 		attacks: [{ attackName: "", attackBonus: 0, damageType: "" }],
 
-		spells: [
-			{
-				spellName: "",
-				spellLevel: 0,
-			},
-		],
-		inventory: {
-			equipment: "",
-			cp: 0,
-			sp: 0,
-			ep: 0,
-			gp: 0,
-			pp: 0,
-		},
+    spells: [{
+      spellName: "",
+      spellLevel: 0,
+    }],
 
+    inventory: {
+      equipment: "",
+      cp: 0,
+      sp: 0,
+      ep: 0,
+      gp: 0,
+      pp: 0,
+    },
+    
 		savingThrows: {
 			strength: 0,
 			dexterity: 0,
