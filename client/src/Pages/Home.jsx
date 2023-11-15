@@ -4,7 +4,6 @@ export default function Home({ API_Url }) {
   return (
     <main>
       <div className="home-info">
-        <h3>Welcome to DnD Companion!</h3>
         <h3>All you need to get started and playing Dungeons and Dragons.</h3>
       </div>
 

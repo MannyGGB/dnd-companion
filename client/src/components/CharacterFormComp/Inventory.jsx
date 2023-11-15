@@ -1,4 +1,9 @@
-const Inventory = ({ API_Url, inventory, handleInventoryChange }) => {
+const Inventory = ({
+  API_Url,
+  inventory,
+  handleInventoryChange,
+  currentCharacter,
+}) => {
   const handleEquipmentChange = (value) => {
     handleInventoryChange({ ...inventory, equipment: value });
   };
@@ -9,12 +14,15 @@ const Inventory = ({ API_Url, inventory, handleInventoryChange }) => {
 
   return (
     <div>
-      <h2>Inventory</h2>
       <label>
         Equipment:
         <input
           type="text"
-          value={inventory.equipment}
+          value={
+            currentCharacter?.inventory
+              ? currentCharacter.inventory.equipment
+              : inventory.equipment
+          }
           onChange={(e) => handleEquipmentChange(e.target.value)}
         />
       </label>
@@ -22,7 +30,11 @@ const Inventory = ({ API_Url, inventory, handleInventoryChange }) => {
         CP:
         <input
           type="number"
-          value={inventory.cp}
+          value={
+            currentCharacter?.inventory
+              ? currentCharacter.inventory.cp
+              : inventory.cp
+          }
           onChange={(e) =>
             handleCurrencyChange("cp", parseInt(e.target.value) || 0)
           }
@@ -32,7 +44,11 @@ const Inventory = ({ API_Url, inventory, handleInventoryChange }) => {
         SP:
         <input
           type="number"
-          value={inventory.sp}
+          value={
+            currentCharacter?.inventory
+              ? currentCharacter.inventory.sp
+              : inventory.sp
+          }
           onChange={(e) =>
             handleCurrencyChange("sp", parseInt(e.target.value) || 0)
           }
@@ -42,7 +58,11 @@ const Inventory = ({ API_Url, inventory, handleInventoryChange }) => {
         EP:
         <input
           type="number"
-          value={inventory.ep}
+          value={
+            currentCharacter?.inventory
+              ? currentCharacter.inventory.ep
+              : inventory.ep
+          }
           onChange={(e) =>
             handleCurrencyChange("ep", parseInt(e.target.value) || 0)
           }
@@ -52,7 +72,11 @@ const Inventory = ({ API_Url, inventory, handleInventoryChange }) => {
         GP:
         <input
           type="number"
-          value={inventory.gp}
+          value={
+            currentCharacter?.inventory
+              ? currentCharacter.inventory.gp
+              : inventory.gp
+          }
           onChange={(e) =>
             handleCurrencyChange("gp", parseInt(e.target.value) || 0)
           }
@@ -62,7 +86,11 @@ const Inventory = ({ API_Url, inventory, handleInventoryChange }) => {
         PP:
         <input
           type="number"
-          value={inventory.pp}
+          value={
+            currentCharacter?.inventory
+              ? currentCharacter.inventory.pp
+              : inventory.pp
+          }
           onChange={(e) =>
             handleCurrencyChange("pp", parseInt(e.target.value) || 0)
           }

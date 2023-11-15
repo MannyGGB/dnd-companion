@@ -1,16 +1,18 @@
-const CharacterTraits = ({ API_Url, handleTraitsChange }) => {
+const CharacterTraits = ({ API_Url, handleTraitsChange, currentCharacter }) => {
   const handleTraitValueChange = (trait, value) => {
     handleTraitsChange(trait, value);
   };
 
   return (
     <div>
-      <h2>CharacterTraits</h2>
       <label>
         Languages:
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("languages", e.target.value)}
+          value={
+            currentCharacter?.traits ? currentCharacter.traits.languages : undefined
+          }
         />
       </label>
       <label>
@@ -19,6 +21,11 @@ const CharacterTraits = ({ API_Url, handleTraitsChange }) => {
           type="text"
           onChange={(e) =>
             handleTraitValueChange("proficiencies", e.target.value)
+          }
+          value={
+            currentCharacter?.traits
+              ? currentCharacter.traits.proficiencies
+              : undefined
           }
         />
       </label>
@@ -29,6 +36,11 @@ const CharacterTraits = ({ API_Url, handleTraitsChange }) => {
           onChange={(e) =>
             handleTraitValueChange("personality", e.target.value)
           }
+          value={
+            currentCharacter?.traits
+              ? currentCharacter.traits.personality
+              : undefined
+          }
         />
       </label>
       <label>
@@ -36,6 +48,9 @@ const CharacterTraits = ({ API_Url, handleTraitsChange }) => {
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("ideals", e.target.value)}
+          value={
+            currentCharacter?.traits ? currentCharacter.traits.ideals : undefined
+          }
         />
       </label>
       <label>
@@ -43,6 +58,9 @@ const CharacterTraits = ({ API_Url, handleTraitsChange }) => {
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("bonds", e.target.value)}
+          value={
+            currentCharacter?.traits ? currentCharacter.traits.bonds : undefined
+          }
         />
       </label>
       <label>
@@ -50,6 +68,9 @@ const CharacterTraits = ({ API_Url, handleTraitsChange }) => {
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("flaws", e.target.value)}
+          value={
+            currentCharacter?.traits ? currentCharacter.traits.flaws : undefined
+          }
         />
       </label>
       <label>
@@ -57,6 +78,9 @@ const CharacterTraits = ({ API_Url, handleTraitsChange }) => {
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("features", e.target.value)}
+          value={
+            currentCharacter?.traits ? currentCharacter.traits.features : undefined
+          }
         />
       </label>
     </div>
