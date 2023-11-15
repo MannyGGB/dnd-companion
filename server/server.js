@@ -16,7 +16,7 @@ mongoose.connect(process.env.DATABASE_URL);
 // add your endpoints here
 app.get("/", (_, response) => response.json("Root route for dnd."));
 
-app.get("/character", async (request, response) => {
+app.get("/form", async (request, response) => {
   try {
     const characterSheet = await Character.find(request.query);
     response.json(characterSheet);
@@ -26,7 +26,7 @@ app.get("/character", async (request, response) => {
   }
 });
 
-app.post("/character", async (request, response) => {
+app.post("/form", async (request, response) => {
   try {
     const newCharacter = await Character.create(request.body);
     response.json(newCharacter);

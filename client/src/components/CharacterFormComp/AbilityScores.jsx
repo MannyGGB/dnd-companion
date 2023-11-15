@@ -19,11 +19,11 @@ const AbilityScores = ({ API_Url, characterData, handleAbilityScoreRoll }) => {
       <h2>Ability Scores</h2>
       <div>
         <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
-        <span>Strength: {strength}</span>
+        <span>strength: {strength}</span>
       </div>
       <div>
         <button onClick={(e) => rollAbilityScore(e, "dexterity")}>Roll</button>
-        <span>Dexterity: {dexterity}</span>
+        <span>dexterity: {dexterity}</span>
       </div>
       <div>
         <button onClick={(e) => rollAbilityScore(e, "constitution")}>
