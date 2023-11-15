@@ -28,7 +28,10 @@ input {
   flex-direction: column;
   justify-content: space-evenly;
 }
-#btton {
+
+
+#formbtn {
   position: absolute;
-  bottom: 5px;
+  bottom: 80px;
+
 }
