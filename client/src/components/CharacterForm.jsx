@@ -106,6 +106,9 @@ const CharacterForm = ({ API_Url }) => {
   const handleProfileChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
+    console.log("name", name);
+    console.log("value", value);
+
     setCharacterData((prevData) => ({
       ...prevData,
       profile: {
@@ -188,7 +191,6 @@ const CharacterForm = ({ API_Url }) => {
     const API = `http://localhost:8080/form`;
     const res = await axios.post(API, characterData);
     setCharacterData([...characterData, res.data]);
-
   };
 
   // need one for post and one for put
@@ -222,11 +224,7 @@ const CharacterForm = ({ API_Url }) => {
             </AccordionSummary>
             <AccordionDetails>
               <AbilityScores
-
-                characterData={characterData.abilityScores}
-
-              
-
+                characterData={characterData}
                 handleAbilityScoreRoll={handleAbilityScoreRoll}
               />
             </AccordionDetails>
@@ -341,7 +339,6 @@ const CharacterForm = ({ API_Url }) => {
       </main>
 
       <button id="formbtn">Submit</button>
-
     </form>
   );
 };

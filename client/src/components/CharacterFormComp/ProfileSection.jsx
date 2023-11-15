@@ -38,7 +38,7 @@ const ProfileSection = ({ API_Url, characterData, handleProfileChange }) => {
         />
       </label>
       <label>Race:</label>
-      <select onChange={handleProfileChange}>
+      <select onChange={handleProfileChange} name="race">
         <option value=""></option>
         {races.map((race, index) => (
           <option value={race} key={index}>
@@ -47,7 +47,7 @@ const ProfileSection = ({ API_Url, characterData, handleProfileChange }) => {
         ))}
       </select>
       <label>Class:</label>
-      <select onChange={handleProfileChange}>
+      <select onChange={handleProfileChange} name="characterClass">
         <option value=""></option>
         {classes.map((characterClass, index) => (
           <option value={characterClass} key={index}>
