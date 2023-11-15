@@ -182,7 +182,6 @@ const CharacterForm = ({ API_Url }) => {
 	const handleSubmit = async (event) => {
 		event.preventDefault;
 		const API = `${API_Url}/form`;
-		console.log(API);
 		const response = await axios.post(API, characterData);
 		setCharacterData([...characterData, response.data]);
 	};
