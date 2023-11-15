@@ -14,7 +14,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
-const CharacterForm = () => {
+const CharacterForm = ({ API_Url }) => {
   const initialCharacterState = {
     profile: {
       characterName: "",

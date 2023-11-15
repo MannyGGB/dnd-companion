@@ -2,7 +2,7 @@
 
 // import React, {useState} from "react";
 
-// function CharacterImage () {
+// function CharacterImage ({API_Url}) {
 
 //   return
 // <img id="character-image" src={CharacterImage.imageURL} />

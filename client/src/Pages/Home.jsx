@@ -1,6 +1,6 @@
 import "../CSS/home.css";
 
-export default function Home() {
+export default function Home({ API_Url }) {
   return (
     <main>
       <div className="home-info">

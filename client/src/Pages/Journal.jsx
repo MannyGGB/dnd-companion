@@ -4,7 +4,7 @@ const date = moment();
 import axios from "axios";
 import "../CSS/journal.css";
 
-export default function Journal() {
+export default function Journal({ API_Url }) {
   const currentDate = date.format("D/MM/YYYY");
 
   const [entry, setEntry] = useState("");
@@ -32,8 +32,8 @@ export default function Journal() {
       text: entry,
       date: currentDate,
     }));
-// change state and delete newEntry
-// 
+    // change state and delete newEntry
+    //
     const newEntry = {
       date: tales.date,
       text: tales.text,
@@ -44,19 +44,19 @@ export default function Journal() {
   }
 
   async function addSubmission() {
-    const API = `http://localhost:8080/journal`;
+    const API = `${API_Url}/journal`;
     await axios.post(API, submission);
   }
 
   async function getSubmissions() {
-    const API = `http://localhost:8080/journal`;
+    const API = `${API_Url}/journal`;
     const res = await axios.get(API);
     setSubmissions(res.data);
   }
 
   async function updateSubmission(event) {
     event.preventDefault();
-    const API = `http://localhost:8080/journal/${submission._id}`;
+    const API = `${API_Url}/journal/${submission._id}`;
     await axios.put(API, submission);
     setSubmissions(res.data);
   }
@@ -64,7 +64,7 @@ export default function Journal() {
   async function deleteSubmission(id) {
     const check = confirm("Are you sure you want to delete?");
     if (check) {
-      const API = `http://localhost:8080/journal/${id}`;
+      const API = `${API_Url}/journal/${id}`;
       await axios.delete(API);
       getSubmissions();
     } else {

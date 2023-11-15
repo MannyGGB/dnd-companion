@@ -1,11 +1,9 @@
 import CharacterForm from "../components/CharacterForm";
 
-export default function Character() {
-
+export default function Character({ API_Url }) {
   return (
     <div>
       <CharacterForm />
     </div>
   );
 }
-
