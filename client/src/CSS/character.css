@@ -29,9 +29,13 @@ input {
   justify-content: space-evenly;
 }
 
-
 #formbtn {
   position: absolute;
   bottom: 80px;
+}
 
+.character-select {
+  position: absolute;
+  top: 60px;
+  left: 80px;
 }

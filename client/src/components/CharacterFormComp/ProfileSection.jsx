@@ -1,7 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const ProfileSection = ({ API_Url, characterData, handleProfileChange }) => {
+const ProfileSection = ({
+  API_Url,
+  characterData,
+  handleProfileChange,
+  currentCharacter,
+}) => {
   const { characterName, characterClass, level, race, experiencePoints } =
     characterData.profile;
 
@@ -33,13 +38,19 @@ const ProfileSection = ({ API_Url, characterData, handleProfileChange }) => {
         <input
           type="text"
           name="characterName"
-          value={characterName}
+          value={
+            currentCharacter?.profile
+              ? currentCharacter.profile.characterName
+              : characterName
+          }
           onChange={handleProfileChange}
         />
       </label>
       <label>Race:</label>
       <select onChange={handleProfileChange} name="race">
-        <option value=""></option>
+        <option value="">
+          {currentCharacter?.profile ? currentCharacter.profile.race : race}
+        </option>
         {races.map((race, index) => (
           <option value={race} key={index}>
             {race}
@@ -48,7 +59,11 @@ const ProfileSection = ({ API_Url, characterData, handleProfileChange }) => {
       </select>
       <label>Class:</label>
       <select onChange={handleProfileChange} name="characterClass">
-        <option value=""></option>
+        <option value="">
+          {currentCharacter?.profile
+            ? currentCharacter.profile.characterClass
+            : characterClass}
+        </option>
         {classes.map((characterClass, index) => (
           <option value={characterClass} key={index}>
             {characterClass}
