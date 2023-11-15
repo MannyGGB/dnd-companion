@@ -1,4 +1,5 @@
 const PhysicalAttributes = ({
+  API_Url,
   physicalAttributes,
   handlePhysicalAttributesChange,
 }) => {
