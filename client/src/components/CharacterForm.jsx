@@ -15,34 +15,34 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
 const CharacterForm = ({ API_Url }) => {
-  const initialCharacterState = {
-    profile: {
-      characterName: "",
-      race: "",
-      class: "",
-      level: 1,
-      experiencePoints: 0,
-    },
-    abilityScores: {
-      strength: 0,
-      dexterity: 0,
-      constitution: 0,
-      intelligence: 0,
-      wisdom: 0,
-      charisma: 0,
-    },
-    physicalAttributes: {
-      armorClass: 0,
-      initiative: 0,
-      speed: 0,
-      currentHitPoints: 0,
-      maximumHitPoints: 0,
-      temporalHitPoints: 0,
-      hitDice: 0,
-      deathSavesSuccess: 0,
-      deathSavesFail: 0,
-    },
-    attacks: [{ attackName: "", attackBonus: 0, damageType: "" }],
+	const initialCharacterState = {
+		profile: {
+			characterName: "",
+			race: "",
+			class: "",
+			level: 1,
+			experiencePoints: 0,
+		},
+		abilityScores: {
+			strength: 0,
+			dexterity: 0,
+			constitution: 0,
+			intelligence: 0,
+			wisdom: 0,
+			charisma: 0,
+		},
+		physicalAttributes: {
+			armorClass: 0,
+			initiative: 0,
+			speed: 0,
+			currentHitPoints: 0,
+			maximumHitPoints: 0,
+			temporalHitPoints: 0,
+			hitDice: 0,
+			deathSavesSuccess: 0,
+			deathSavesFail: 0,
+		},
+		attacks: [{ attackName: "", attackBonus: 0, damageType: "" }],
 
 		spells: [
 			{
@@ -182,6 +182,7 @@ const CharacterForm = ({ API_Url }) => {
 	const handleSubmit = async (event) => {
 		event.preventDefault;
 		const API = `${API_Url}/form`;
+		console.log(API);
 		const response = await axios.post(API, characterData);
 		setCharacterData([...characterData, response.data]);
 	};
