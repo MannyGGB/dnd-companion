@@ -1,4 +1,4 @@
-const Inventory = ({ inventory, handleInventoryChange }) => {
+const Inventory = ({ API_Url, inventory, handleInventoryChange }) => {
   const handleEquipmentChange = (value) => {
     handleInventoryChange({ ...inventory, equipment: value });
   };

@@ -1,4 +1,4 @@
-const AbilityScores = ({ characterData, handleAbilityScoreRoll }) => {
+const AbilityScores = ({ API_Url, characterData, handleAbilityScoreRoll }) => {
   const { strength, dexterity, constitution, intelligence, wisdom, charisma } =
     characterData.abilityScores;
 
