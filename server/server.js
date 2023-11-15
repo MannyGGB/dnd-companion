@@ -26,6 +26,16 @@ app.get("/character", async (request, response) => {
   }
 });
 
+app.post("/character", async (request, response) => {
+  try {
+    const newCharacter = await Character.create(request.body);
+    response.json(newCharacter);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json("500 Internal Server Error");
+  }
+});
+
 app.get("/form/races", async (request, response) => {
   try {
     const API = `https://api.open5e.com/v1/races/?format=json`;
