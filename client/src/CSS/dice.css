@@ -1,1 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
 
+.dice {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.panel {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  perspective: 400px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: hotpink; /* Fixed color for numbers */
+}
+
+.side {
+  position: absolute;
+  background-color: black; /* Fixed color for the dice */
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  line-height: 200px;
+}
