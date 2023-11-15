@@ -11,36 +11,26 @@ export default function Journal({ API_Url }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [entry, setEntry] = useState("");
-  const [submission, setSubmission] = useState({});
+  // const [entry, setEntry] = useState("");
+  const [submission, setSubmission] = useState({
+    text: "",
+    date: currentDate,
+  });
   const [submissions, setSubmissions] = useState([]);
 
   useEffect(() => {
     getSubmissions();
   }, []);
 
-  const [tales, addTales] = useState({
-    text: "",
-    date: "",
-  });
-
   function handleChange(event) {
-    setEntry(event.target.value);
+    setSubmission({ ...submission, text: event.target.value });
   }
 
   function handleSubmit(event) {
-    getSubmissions();
     event.preventDefault();
-    addTales({
-      text: entry,
-      date: currentDate,
-    });
 
-    setSubmission(tales);
-
-    setSubmission(newEntry);
     addSubmission();
-    getSubmissions();
+    setSubmissions([...submissions, submission]);
   }
 
   async function addSubmission() {
