@@ -1,4 +1,4 @@
-const SavingThrows = ({ handleSavingThrowChange }) => {
+const SavingThrows = ({ API_Url, handleSavingThrowChange }) => {
   const handleThrowChange = (stat, value) => {
     handleSavingThrowChange(stat, value);
   };

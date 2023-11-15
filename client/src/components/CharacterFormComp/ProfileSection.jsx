@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const ProfileSection = ({ characterData, handleProfileChange }) => {
+const ProfileSection = ({ API_Url, characterData, handleProfileChange }) => {
   const { characterName, characterClass, level, race, experiencePoints } =
     characterData.profile;
 

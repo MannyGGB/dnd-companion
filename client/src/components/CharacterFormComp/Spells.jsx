@@ -1,4 +1,4 @@
-const Spells = ({ spells, handleSpellsChange }) => {
+const Spells = ({ API_Url, spells, handleSpellsChange }) => {
   const handleSpellChange = (index, field, value) => {
     const updatedSpells = [...spells];
     updatedSpells[index][field] = value;

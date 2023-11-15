@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const SpellForm = () => {
+const SpellForm = ({ API_Url }) => {
   const [classes, setClasses] = useState([]);
   const [levels, setLevels] = useState([]);
   const [spells, setSpells] = useState([]);

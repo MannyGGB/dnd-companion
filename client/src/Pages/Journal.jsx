@@ -5,7 +5,8 @@ import axios from "axios";
 import "../CSS/journal.css";
 import Modal from "@mui/material/Modal";
 
-export default function Journal() {
+
+export default function Journal({ API_Url }) {
   const currentDate = date.format("DD/MM/YYYY");
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -35,27 +36,29 @@ export default function Journal() {
       text: entry,
       date: currentDate,
     });
-    console.log(tales);
-
+    
     setSubmission(tales);
+    }));
+  
+    setSubmission(newEntry);
     addSubmission();
     getSubmissions();
   }
 
   async function addSubmission() {
-    const API = `http://localhost:8080/journal`;
+    const API = `${API_Url}/journal`;
     await axios.post(API, submission);
   }
 
   async function getSubmissions() {
-    const API = `http://localhost:8080/journal`;
+    const API = `${API_Url}/journal`;
     const res = await axios.get(API);
     setSubmissions(res.data);
   }
 
-  async function updateSubmission(id) {
-    console.log(id);
-    const API = `http://localhost:8080/journal/${id}`;
+  async function updateSubmission(event) {
+    event.preventDefault();
+    const API = `${API_Url}/journal/${submission._id}`;
     await axios.put(API, submission);
     getSubmissions();
   }
@@ -63,7 +66,7 @@ export default function Journal() {
   async function deleteSubmission(id) {
     const check = confirm("Are you sure you want to delete?");
     if (check) {
-      const API = `http://localhost:8080/journal/${id}`;
+      const API = `${API_Url}/journal/${id}`;
       await axios.delete(API);
       getSubmissions();
     } else {

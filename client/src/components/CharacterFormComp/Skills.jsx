@@ -1,4 +1,4 @@
-const Skills = ({ handleSkillChange }) => {
+const Skills = ({ API_Url, handleSkillChange }) => {
   const handleSkillValueChange = (skill, value) => {
     handleSkillChange(skill, value);
   };
