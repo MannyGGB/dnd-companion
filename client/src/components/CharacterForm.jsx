@@ -104,17 +104,21 @@ const CharacterForm = ({ API_Url }) => {
 
 	const [characterData, setCharacterData] = useState(initialCharacterState);
 
-	const handleProfileChange = (event) => {
-		event.preventDefault();
-		const { name, value } = event.target;
-		setCharacterData((prevData) => ({
-			...prevData,
-			profile: {
-				...prevData.profile,
-				[name]: value,
-			},
-		}));
-	};
+
+  const handleProfileChange = (event) => {
+    event.preventDefault();
+    const { name, value } = event.target;
+    console.log("name", name);
+    console.log("value", value);
+
+    setCharacterData((prevData) => ({
+      ...prevData,
+      profile: {
+        ...prevData.profile,
+        [name]: value,
+      },
+    }));
+  };
 
 	const handleAbilityScoreRoll = (ability, score) => {
 		setCharacterData((prevData) => ({
@@ -195,6 +199,7 @@ const CharacterForm = ({ API_Url }) => {
 	useEffect(() => {
 		getCharacter();
 	}, []);
+
 
 	async function getCharacter() {
 		const API = `http://localhost:8080/form/?_id=${params.id}`;
@@ -350,6 +355,7 @@ const CharacterForm = ({ API_Url }) => {
 			<button id="formbtn">Submit</button>
 		</form>
 	);
+
 };
 
 export default CharacterForm;
