@@ -196,7 +196,7 @@ const CharacterForm = ({ API_Url }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const API = `http://localhost:8080/form`;
+    const API = `${API_Url}/form`;
     const res = await axios.post(API, characterData);
     setCharacterData([...characterData, res.data]);
   };
@@ -208,7 +208,7 @@ const CharacterForm = ({ API_Url }) => {
 
   async function getCharacter() {
     console.dir(selectedCharacter);
-    const API = `http://localhost:8080/form?_id=${selectedCharacter}`;
+    const API = `${API_Url}/form?_id=${selectedCharacter}`;
     const res = await axios.get(API);
     setCurrentCharacter(res.data[0]);
     setCharacterData(res.data[0]);
@@ -217,7 +217,7 @@ const CharacterForm = ({ API_Url }) => {
 
   async function updateCharacter(event) {
     event.preventDefault();
-    const API = `http://localhost:8080/form/${selectedCharacter}`;
+    const API = `${API_Url}/form/${selectedCharacter}`;
     await axios.put(API, characterData);
     console.log(characterData);
     setCharacterData(characterData);
@@ -229,7 +229,7 @@ const CharacterForm = ({ API_Url }) => {
   }
 
   async function getCharacterList() {
-    const API = `http://localhost:8080/form`;
+    const API = `${API_Url}/form`;
     const res = await axios.get(API);
     setCharacterList(res.data);
     console.log(res.data);
