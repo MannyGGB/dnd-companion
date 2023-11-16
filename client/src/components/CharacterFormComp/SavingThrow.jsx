@@ -16,7 +16,7 @@ const SavingThrows = ({
           onChange={(e) =>
             handleThrowChange("strength", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.savingThrows
               ? currentCharacter.savingThrows.strength
               : undefined
@@ -30,7 +30,7 @@ const SavingThrows = ({
           onChange={(e) =>
             handleThrowChange("dexterity", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.savingThrows
               ? currentCharacter.savingThrows.dexterity
               : undefined
@@ -45,7 +45,7 @@ const SavingThrows = ({
           onChange={(e) =>
             handleThrowChange("constitution", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.savingThrows
               ? currentCharacter.savingThrows.constitution
               : undefined
@@ -59,7 +59,7 @@ const SavingThrows = ({
           onChange={(e) =>
             handleThrowChange("intelligence", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.savingThrows
               ? currentCharacter.savingThrows.intelligence
               : undefined
@@ -73,7 +73,7 @@ const SavingThrows = ({
           onChange={(e) =>
             handleThrowChange("wisdom", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.savingThrows
               ? currentCharacter.savingThrows.wisdom
               : undefined
@@ -87,7 +87,7 @@ const SavingThrows = ({
           onChange={(e) =>
             handleThrowChange("charisma", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.savingThrows
               ? currentCharacter.savingThrows.charisma
               : undefined

@@ -18,7 +18,7 @@ const Inventory = ({
         Equipment:
         <input
           type="text"
-          value={
+          defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.equipment
               : inventory.equipment
@@ -30,7 +30,7 @@ const Inventory = ({
         CP:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.cp
               : inventory.cp
@@ -44,7 +44,7 @@ const Inventory = ({
         SP:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.sp
               : inventory.sp
@@ -58,7 +58,7 @@ const Inventory = ({
         EP:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.ep
               : inventory.ep
@@ -72,7 +72,7 @@ const Inventory = ({
         GP:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.gp
               : inventory.gp
@@ -86,7 +86,7 @@ const Inventory = ({
         PP:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.pp
               : inventory.pp
