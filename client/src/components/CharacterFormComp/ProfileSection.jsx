@@ -37,7 +37,7 @@ const ProfileSection = ({
         <input
           type="text"
           name="characterName"
-          value={
+          defaultValue={
             currentCharacter?.profile
               ? currentCharacter.profile.characterName
               : characterName
@@ -74,7 +74,7 @@ const ProfileSection = ({
         <input
           type="number"
           name="level"
-          value={
+          defaultValue={
             currentCharacter?.profile ? currentCharacter.profile.level : level
           }
           onChange={handleProfileChange}
@@ -85,7 +85,7 @@ const ProfileSection = ({
         <input
           type="number"
           name="experiencePoints"
-          value={
+          defaultValue={
             currentCharacter?.profile
               ? currentCharacter.profile.experiencePoints
               : experiencePoints
