@@ -1,17 +1,25 @@
-const SavingThrows = ({ API_Url, handleSavingThrowsChange }) => {
+const SavingThrows = ({
+  API_Url,
+  handleSavingThrowsChange,
+  currentCharacter,
+}) => {
   const handleThrowChange = (stat, value) => {
     handleSavingThrowsChange(stat, value);
   };
 
   return (
     <div>
-      <h2>Saving Throws</h2>
       <label>
         Strength:
         <input
           type="number"
           onChange={(e) =>
-            handleThrowChange("strength", parseInt(e.target.value) || 0)
+            handleThrowChange("strength", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.savingThrows
+              ? currentCharacter.savingThrows.strength
+              : undefined
           }
         />
       </label>
@@ -20,7 +28,12 @@ const SavingThrows = ({ API_Url, handleSavingThrowsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleThrowChange("dexterity", parseInt(e.target.value) || 0)
+            handleThrowChange("dexterity", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.savingThrows
+              ? currentCharacter.savingThrows.dexterity
+              : undefined
           }
         />
       </label>
@@ -30,7 +43,12 @@ const SavingThrows = ({ API_Url, handleSavingThrowsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleThrowChange("constitution", parseInt(e.target.value) || 0)
+            handleThrowChange("constitution", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.savingThrows
+              ? currentCharacter.savingThrows.constitution
+              : undefined
           }
         />
       </label>
@@ -39,7 +57,12 @@ const SavingThrows = ({ API_Url, handleSavingThrowsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleThrowChange("intelligence", parseInt(e.target.value) || 0)
+            handleThrowChange("intelligence", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.savingThrows
+              ? currentCharacter.savingThrows.intelligence
+              : undefined
           }
         />
       </label>
@@ -48,7 +71,12 @@ const SavingThrows = ({ API_Url, handleSavingThrowsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleThrowChange("wisdom", parseInt(e.target.value) || 0)
+            handleThrowChange("wisdom", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.savingThrows
+              ? currentCharacter.savingThrows.wisdom
+              : undefined
           }
         />
       </label>
@@ -57,7 +85,12 @@ const SavingThrows = ({ API_Url, handleSavingThrowsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleThrowChange("charisma", parseInt(e.target.value) || 0)
+            handleThrowChange("charisma", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.savingThrows
+              ? currentCharacter.savingThrows.charisma
+              : undefined
           }
         />
       </label>

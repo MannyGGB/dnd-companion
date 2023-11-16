@@ -1,4 +1,9 @@
-const AbilityScores = ({ API_Url, characterData, handleAbilityScoreRoll }) => {
+const AbilityScores = ({
+  API_Url,
+  characterData,
+  handleAbilityScoreRoll,
+  currentCharacter,
+}) => {
   const { strength, dexterity, constitution, intelligence, wisdom, charisma } =
     characterData.abilityScores;
 
@@ -16,34 +21,59 @@ const AbilityScores = ({ API_Url, characterData, handleAbilityScoreRoll }) => {
   };
   return (
     <div>
-      <h2>Ability Scores</h2>
-      <div>
+      <div className="ability-div">
+        <span>
+          Strength:{" "}
+          {currentCharacter?.abilityScores
+            ? currentCharacter.abilityScores.strength
+            : strength}
+        </span>
         <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
-        <span>strength: {strength}</span>
       </div>
-      <div>
-        <button onClick={(e) => rollAbilityScore(e, "dexterity")}>Roll</button>
-        <span>dexterity: {dexterity}</span>
+      <div className="ability-div">
+        <span>
+          Dexterity:{" "}
+          {currentCharacter?.abilityScores
+            ? currentCharacter.abilityScores.dexterity
+            : dexterity}
+        </span>
+        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
       </div>
-      <div>
-        <button onClick={(e) => rollAbilityScore(e, "constitution")}>
-          Roll
-        </button>
-        <span>Constitution: {constitution}</span>
+      <div className="ability-div">
+        <span>
+          Constitution:{" "}
+          {currentCharacter?.abilityScores
+            ? currentCharacter.abilityScores.constitution
+            : constitution}
+        </span>
+        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
       </div>
-      <div>
-        <button onClick={(e) => rollAbilityScore(e, "intelligence")}>
-          Roll
-        </button>
-        <span>Intelligence: {intelligence}</span>
+      <div className="ability-div">
+        <span>
+          Intelligence:{" "}
+          {currentCharacter?.abilityScores
+            ? currentCharacter.abilityScores.intelligence
+            : intelligence}
+        </span>
+        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
       </div>
-      <div>
-        <button onClick={(e) => rollAbilityScore(e, "wisdom")}>Roll</button>
-        <span>Wisdom: {wisdom}</span>
+      <div className="ability-div">
+        <span>
+          Wisdom:{" "}
+          {currentCharacter?.abilityScores
+            ? currentCharacter.abilityScores.wisdom
+            : wisdom}
+        </span>
+        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
       </div>
-      <div>
-        <button onClick={(e) => rollAbilityScore(e, "charisma")}>Roll</button>
-        <span>Charisma: {charisma}</span>
+      <div className="ability-div">
+        <span>
+          Charisma:{" "}
+          {currentCharacter?.abilityScores
+            ? currentCharacter.abilityScores.charisma
+            : charisma}
+        </span>
+        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
       </div>
     </div>
   );

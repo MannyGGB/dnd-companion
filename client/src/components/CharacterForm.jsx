@@ -252,7 +252,7 @@ const CharacterForm = ({ API_Url }) => {
                 id="panel1a-header"
                 expandIcon="+"
               >
-                <Typography>Character</Typography>
+                <Typography>Character Profile</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <ProfileSection
@@ -319,7 +319,7 @@ const CharacterForm = ({ API_Url }) => {
                 id="panel1a-header"
                 expandIcon="+"
               >
-                <Typography>Attacks</Typography>
+                <Typography>Spells</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Spells

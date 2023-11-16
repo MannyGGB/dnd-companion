@@ -18,7 +18,6 @@ const Spells = ({ spells, handleSpellsChange }) => {
 
   return (
     <div>
-      <h2>Spells</h2>
       {spells.map((spell, index) => (
         <div key={index}>
           <label>

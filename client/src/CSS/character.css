@@ -39,3 +39,10 @@ input {
   top: 60px;
   left: 80px;
 }
+
+.ability-div {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}

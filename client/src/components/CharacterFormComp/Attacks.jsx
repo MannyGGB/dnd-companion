@@ -21,7 +21,6 @@ const Attacks = ({ attacks, handleAttacksChange }) => {
 
   return (
     <div>
-      <h2>Attacks</h2>
       {attacks.map((attack, index) => (
         <div key={index}>
           <label>

@@ -1,17 +1,19 @@
-const Skills = ({ API_Url, handleSkillsChange }) => {
+const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
   const handleSkillValueChange = (skill, value) => {
     handleSkillsChange(skill, value);
   };
 
   return (
     <div>
-      <h2>Skills</h2>
       <label>
         Acrobatics:
         <input
           type="number"
           onChange={(e) =>
-            handleSkillValueChange("acrobatics", parseInt(e.target.value) || 0)
+            handleSkillValueChange("acrobatics", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.acrobatics : undefined
           }
         />
       </label>
@@ -22,8 +24,13 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           onChange={(e) =>
             handleSkillValueChange(
               "animalHandling",
-              parseInt(e.target.value) || 0
+              parseInt(e.target.value)
             )
+          }
+          value={
+            currentCharacter?.skills
+              ? currentCharacter.skills.animalHandling
+              : undefined
           }
         />
       </label>
@@ -32,7 +39,10 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleSkillValueChange("arcana", parseInt(e.target.value) || 0)
+            handleSkillValueChange("arcana", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.arcana : undefined
           }
         />
       </label>
@@ -41,7 +51,10 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleSkillValueChange("athletics", parseInt(e.target.value) || 0)
+            handleSkillValueChange("athletics", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.athletics : undefined
           }
         />
       </label>
@@ -50,7 +63,10 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleSkillValueChange("deception", parseInt(e.target.value) || 0)
+            handleSkillValueChange("deception", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.deception : undefined
           }
         />
       </label>
@@ -59,7 +75,10 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleSkillValueChange("history", parseInt(e.target.value) || 0)
+            handleSkillValueChange("history", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.history : undefined
           }
         />
       </label>
@@ -68,7 +87,10 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleSkillValueChange("insight", parseInt(e.target.value) || 0)
+            handleSkillValueChange("insight", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.insight : undefined
           }
         />
       </label>
@@ -79,8 +101,13 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           onChange={(e) =>
             handleSkillValueChange(
               "intimidation",
-              parseInt(e.target.value) || 0
+              parseInt(e.target.value)
             )
+          }
+          value={
+            currentCharacter?.skills
+              ? currentCharacter.skills.intimidation
+              : undefined
           }
         />
       </label>
@@ -91,8 +118,13 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           onChange={(e) =>
             handleSkillValueChange(
               "investigation",
-              parseInt(e.target.value) || 0
+              parseInt(e.target.value)
             )
+          }
+          value={
+            currentCharacter?.skills
+              ? currentCharacter.skills.investigation
+              : undefined
           }
         />
       </label>
@@ -101,7 +133,10 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
         <input
           type="number"
           onChange={(e) =>
-            handleSkillValueChange("medicine", parseInt(e.target.value) || 0)
+            handleSkillValueChange("medicine", parseInt(e.target.value))
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.medicine : undefined
           }
         />
       </label>
@@ -112,6 +147,9 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           onChange={(e) =>
             handleSkillValueChange("nature", parseInt(e.target.value) || 0)
           }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.nature : undefined
+          }
         />
       </label>
       <label>
@@ -120,6 +158,9 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           type="number"
           onChange={(e) =>
             handleSkillValueChange("perception", parseInt(e.target.value) || 0)
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.perception : undefined
           }
         />
       </label>
@@ -130,6 +171,11 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           onChange={(e) =>
             handleSkillValueChange("performance", parseInt(e.target.value) || 0)
           }
+          value={
+            currentCharacter?.skills
+              ? currentCharacter.skills.performance
+              : undefined
+          }
         />
       </label>
       <label>
@@ -139,6 +185,9 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           onChange={(e) =>
             handleSkillValueChange("persuasion", parseInt(e.target.value) || 0)
           }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.persuasion : undefined
+          }
         />
       </label>
       <label>
@@ -147,6 +196,9 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           type="number"
           onChange={(e) =>
             handleSkillValueChange("religion", parseInt(e.target.value) || 0)
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.religion : undefined
           }
         />
       </label>
@@ -160,6 +212,11 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
               parseInt(e.target.value) || 0
             )
           }
+          value={
+            currentCharacter?.skills
+              ? currentCharacter.skills.sleightOfHand
+              : undefined
+          }
         />
       </label>
       <label>
@@ -169,6 +226,9 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           onChange={(e) =>
             handleSkillValueChange("stealth", parseInt(e.target.value) || 0)
           }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.stealth : undefined
+          }
         />
       </label>
       <label>
@@ -177,6 +237,9 @@ const Skills = ({ API_Url, handleSkillsChange }) => {
           type="number"
           onChange={(e) =>
             handleSkillValueChange("survival", parseInt(e.target.value) || 0)
+          }
+          value={
+            currentCharacter?.skills ? currentCharacter.skills.survival : undefined
           }
         />
       </label>

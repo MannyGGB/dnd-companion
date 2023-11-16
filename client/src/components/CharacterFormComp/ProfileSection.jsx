@@ -32,7 +32,6 @@ const ProfileSection = ({
 
   return (
     <div>
-      <h2>Character Profile</h2>
       <label>
         Character Name:
         <input
@@ -75,7 +74,9 @@ const ProfileSection = ({
         <input
           type="number"
           name="level"
-          value={level}
+          value={
+            currentCharacter?.profile ? currentCharacter.profile.level : level
+          }
           onChange={handleProfileChange}
         />
       </label>
@@ -84,7 +85,11 @@ const ProfileSection = ({
         <input
           type="number"
           name="experiencePoints"
-          value={experiencePoints}
+          value={
+            currentCharacter?.profile
+              ? currentCharacter.profile.experiencePoints
+              : experiencePoints
+          }
           onChange={handleProfileChange}
         />
       </label>

@@ -1,81 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
 html {
-	height: 100vh;
-}
-
-main {
-	height: 100vh;
-	max-width: 400px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin: 1rem auto;
-	text-align: center;
-	padding-top: 8vh;
-	padding-bottom: 12vh;
-}
-
-#dice-button {
-	width: 6rem;
-	margin: 1rem auto;
-}
-
-label {
-	margin-right: 1rem;
-}
-
-#root {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	justify-content: space-between;
+  height: 100vh;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  background-color: #f8f4ef;
+  font-family: "Poppins", sans-serif;
+}
+
+#app-title {
+	font-size: 1rem;
+}
+
+main {
+  height: 100vh;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem auto;
+  text-align: center;
+  padding-top: 8vh;
+  padding-bottom: 12vh;
+}
+
+#dice-button {
+  width: 6rem;
+  margin: 1rem auto;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .NavBar,
 .TopBar {
-	max-width: 500px;
-	min-width: 360px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	background-color: rgb(197, 197, 197);
-	padding: 10px 0px;
-	margin: 0;
+  max-width: 500px;
+  min-width: 360px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #edeae5;
+  padding: 10px 0px;
+  margin: 0;
 }
 
 .TopBar {
-	justify-content: start;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  border-bottom: 1px solid #bfbdbd;
+}
+
+#top-bar-link {
+	display: flex;
 	align-items: center;
-	position: fixed;
-	width: 100%;
-	top: 0px;
+	justify-content: center;
+	height: 3rem;
+	text-decoration: none;
 }
 
 .NavBar {
-	position: fixed;
-	width: 100%;
-	bottom: 0px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  border-top: 1px solid #bfbdbd;
 }
 
 #logo {
-	width: 40px;
-	border-radius: 20px;
-	margin-left: 10px;
+  width: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 
 #dice {
-	border: 1px sold black;
-	background-color: white;
-	border-radius: 10px;
+  border: 1px sold black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
 #userPicture {
-	width: 30px;
-	border-radius: 20px;
-	/* border: solid 1px black; */
+  width: 30px;
+  border-radius: 20px;
+  /* border: solid 1px black; */
 }

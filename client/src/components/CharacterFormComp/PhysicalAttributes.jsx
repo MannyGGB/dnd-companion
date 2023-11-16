@@ -2,6 +2,7 @@ const PhysicalAttributes = ({
   API_Url,
   physicalAttributes,
   handlePhysicalAttributesChange,
+  currentCharacter,
 }) => {
   const {
     armorClass,
@@ -21,14 +22,17 @@ const PhysicalAttributes = ({
 
   return (
     <div>
-      <h2>Physical Attributes</h2>
       <label>
         Armor Class:
         <input
           type="number"
-          value={armorClass}
+          value={
+            currentCharacter?.physicalAttributes
+              ? currentCharacter.physicalAttributes.armorClass
+              : armorClass
+          }
           onChange={(e) =>
-            handleAttributeChange("armorClass", parseInt(e.target.value) || 0)
+            handleAttributeChange("armorClass", parseInt(e.target.value))
           }
         />
       </label>
@@ -36,9 +40,13 @@ const PhysicalAttributes = ({
         Initiative:
         <input
           type="number"
-          value={initiative}
+          value={
+            currentCharacter?.physicalAttributes
+              ? currentCharacter.physicalAttributes.initiative
+              : initiative
+          }
           onChange={(e) =>
-            handleAttributeChange("initiative", parseInt(e.target.value) || 0)
+            handleAttributeChange("initiative", parseInt(e.target.value))
           }
         />
       </label>
@@ -46,9 +54,13 @@ const PhysicalAttributes = ({
         Speed:
         <input
           type="number"
-          value={speed}
+          value={
+            currentCharacter?.physicalAttributes
+              ? currentCharacter.physicalAttributes.speed
+              : speed
+          }
           onChange={(e) =>
-            handleAttributeChange("speed", parseInt(e.target.value) || 0)
+            handleAttributeChange("speed", parseInt(e.target.value))
           }
         />
       </label>
@@ -56,11 +68,15 @@ const PhysicalAttributes = ({
         Current Hit Points:
         <input
           type="number"
-          value={currentHitPoints}
+          value={
+            currentCharacter?.physicalAttributes
+              ? currentCharacter.physicalAttributes.currentHitPoints
+              : currentHitPoints
+          }
           onChange={(e) =>
             handleAttributeChange(
               "currentHitPoints",
-              parseInt(e.target.value) || 0
+              parseInt(e.target.value)
             )
           }
         />
@@ -69,11 +85,15 @@ const PhysicalAttributes = ({
         Maximum Hit Points:
         <input
           type="number"
-          value={maximumHitPoints}
+          value={
+            currentCharacter?.physicalAttributes
+              ? currentCharacter.physicalAttributes.maximumHitPoints
+              : maximumHitPoints
+          }
           onChange={(e) =>
             handleAttributeChange(
               "maximumHitPoints",
-              parseInt(e.target.value) || 0
+              parseInt(e.target.value)
             )
           }
         />
@@ -82,11 +102,15 @@ const PhysicalAttributes = ({
         Temporal Hit Points:
         <input
           type="number"
-          value={temporalHitPoints}
+          value={
+            currentCharacter?.physicalAttributes
+              ? currentCharacter.physicalAttributes.temporalHitPoints
+              : temporalHitPoints
+          }
           onChange={(e) =>
             handleAttributeChange(
               "temporalHitPoints",
-              parseInt(e.target.value) || 0
+              parseInt(e.target.value)
             )
           }
         />
@@ -95,9 +119,13 @@ const PhysicalAttributes = ({
         Hit Dice:
         <input
           type="number"
-          value={hitDice}
+          value={
+            currentCharacter?.physicalAttributes
+              ? currentCharacter.physicalAttributes.hitDice
+              : hitDice
+          }
           onChange={(e) =>
-            handleAttributeChange("hitDice", parseInt(e.target.value) || 0)
+            handleAttributeChange("hitDice", parseInt(e.target.value))
           }
         />
       </label>
@@ -105,11 +133,15 @@ const PhysicalAttributes = ({
         Death Saves Success:
         <input
           type="number"
-          value={deathSavesSuccess}
+          value={
+            currentCharacter?.physicalAttributes
+              ? currentCharacter.physicalAttributes.deathSavesSuccess
+              : deathSavesSuccess
+          }
           onChange={(e) =>
             handleAttributeChange(
               "deathSavesSuccess",
-              parseInt(e.target.value) || 0
+              parseInt(e.target.value)
             )
           }
         />
@@ -118,11 +150,15 @@ const PhysicalAttributes = ({
         Death Saves Fail:
         <input
           type="number"
-          value={deathSavesFail}
+          value={
+            currentCharacter?.physicalAttributes
+              ? currentCharacter.physicalAttributes.deathSavesFail
+              : deathSavesFail
+          }
           onChange={(e) =>
             handleAttributeChange(
               "deathSavesFail",
-              parseInt(e.target.value) || 0
+              parseInt(e.target.value)
             )
           }
         />
