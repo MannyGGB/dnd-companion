@@ -15,13 +15,9 @@ _n.b. Throughout the project we both pair programmed and mob programmed, so the 
 
 A Dungeons and Dragons (D and D) companion app, suitable for users with no knowledge of D and D right through to experienced players. Users can access the main app without logging on, however, upon logging in they can create characters and save their attributes.
 
-## Our web request response cycle
+## Our web request response cycle and wireframe
 
-![Web request response cycle](https://imgur.com/a/U6zclvs)
-
-## Our wireframe
-
-![Wireframe](https://imgur.com/a/lnGWHX6)
+Please contact one of the project contributors if you would like copies of these
 
 ## The overall problem domain and how the project solves those problems
 
