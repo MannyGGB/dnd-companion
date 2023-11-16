@@ -28,7 +28,6 @@ export default function Journal({ API_Url }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-
     addSubmission();
     setSubmissions([...submissions, submission]);
   }
@@ -48,6 +47,8 @@ export default function Journal({ API_Url }) {
     event.preventDefault();
     const API = `${API_Url}/journal/${submission._id}`;
     await axios.put(API, submission);
+    setSubmission(submission);
+    handleClose();
     getSubmissions();
   }
 
@@ -62,31 +63,45 @@ export default function Journal({ API_Url }) {
     }
   }
 
+  async function handleOpenModal(id) {
+    handleOpen();
+    const foundSubmission = submissions.find((sub) => sub._id == id);
+    setSubmission(foundSubmission);
+  }
   return (
     <main id="journal-main">
       <h3>
         Use the journal to keep track of your journey through your sessions...
       </h3>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="Write your tales below:"></label>
-        <input onChange={handleChange} type="text" />
+        <textarea
+          onChange={handleChange}
+          type="text"
+          placeholder="Did your character pick up any interesting items on their travels today?
+Did you Dungeon Master let slip any information that could be useful for your next session?
+Favourite moment from today’s session?"
+        />
         <button>Submit</button>
       </form>
 
       {submissions.map((sub) => (
-        <div className="submissions">
+        <div className="submissions" key={sub._id}>
           <h3>Session Date: {sub.date}</h3>
           <p>{sub.text}</p>
-          <button onClick={handleOpen}>Edit</button>
+          <button onClick={() => handleOpenModal(sub._id)}>Edit</button>
           <button onClick={() => deleteSubmission(sub._id)}>Delete</button>
         </div>
       ))}
 
       <Modal id="modal" open={open} onClose={handleClose}>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="Edit your submission below:"></label>
-          <input onChange={handleChange} type="text" />
-          <button>Submit</button>
+        <form onSubmit={updateSubmission}>
+          <label>Edit your submission below:</label>
+          <textarea
+            onChange={handleChange}
+            type="text"
+            value={submission.text}
+          />
+          <button>Update</button>
         </form>
       </Modal>
     </main>

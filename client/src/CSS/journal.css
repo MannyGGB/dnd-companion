@@ -1,7 +1,16 @@
 #journal-main {
   justify-content: flex-start;
 }
-
+#journal-main form textarea {
+  min-width: 50vw;
+  min-height: 20vh;
+  overflow: scroll;
+  border-radius: 8px;
+}
+#journal-main form button {
+  display: block;
+  margin: 0.5rem auto;
+}
 #modal {
   position: absolute;
   top: 50%;
@@ -9,9 +18,30 @@
   transform: translate(-50%, -50%);
   height: 100vh;
   width: 100vw;
-  background-color: rgba(73, 73, 73, 0);
+  background-color: rgba(73, 73, 73, 0.75);
+}
+#modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100vw;
+
+  color: white;
+}
+#modal form label {
+  width: 250px;
+  text-align: center;
 }
 
+#modal form textarea {
+  margin: 20px;
+  min-width: 50vw;
+  min-height: 20vh;
+  overflow: scroll;
+  border-radius: 8px;
+}
 .submissions {
   margin: 1rem auto;
   border: 1px solid black;
