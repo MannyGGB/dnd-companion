@@ -18,25 +18,25 @@ const Inventory = ({
         Equipment:
         <input
           type="text"
+          onChange={(e) => handleEquipmentChange(e.target.value)}
           defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.equipment
-              : inventory.equipment
+              : undefined
           }
-          onChange={(e) => handleEquipmentChange(e.target.value)}
         />
       </label>
       <label>
         CP:
         <input
           type="number"
+          onChange={(e) =>
+            handleCurrencyChange("cp", parseInt(e.target.value) || 0)
+          }
           defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.cp
-              : inventory.cp
-          }
-          onChange={(e) =>
-            handleCurrencyChange("cp", parseInt(e.target.value) || 0)
+              : undefined
           }
         />
       </label>
@@ -44,13 +44,13 @@ const Inventory = ({
         SP:
         <input
           type="number"
+          onChange={(e) =>
+            handleCurrencyChange("sp", parseInt(e.target.value) || 0)
+          }
           defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.sp
-              : inventory.sp
-          }
-          onChange={(e) =>
-            handleCurrencyChange("sp", parseInt(e.target.value) || 0)
+              : undefined
           }
         />
       </label>
@@ -58,13 +58,13 @@ const Inventory = ({
         EP:
         <input
           type="number"
+          onChange={(e) =>
+            handleCurrencyChange("ep", parseInt(e.target.value) || 0)
+          }
           defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.ep
-              : inventory.ep
-          }
-          onChange={(e) =>
-            handleCurrencyChange("ep", parseInt(e.target.value) || 0)
+              : undefined
           }
         />
       </label>
@@ -72,13 +72,13 @@ const Inventory = ({
         GP:
         <input
           type="number"
+          onChange={(e) =>
+            handleCurrencyChange("gp", parseInt(e.target.value) || 0)
+          }
           defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.gp
-              : inventory.gp
-          }
-          onChange={(e) =>
-            handleCurrencyChange("gp", parseInt(e.target.value) || 0)
+              : undefined
           }
         />
       </label>
@@ -86,13 +86,13 @@ const Inventory = ({
         PP:
         <input
           type="number"
+          onChange={(e) =>
+            handleCurrencyChange("pp", parseInt(e.target.value) || 0)
+          }
           defaultValue={
             currentCharacter?.inventory
               ? currentCharacter.inventory.pp
-              : inventory.pp
-          }
-          onChange={(e) =>
-            handleCurrencyChange("pp", parseInt(e.target.value) || 0)
+              : undefined
           }
         />
       </label>

@@ -211,7 +211,17 @@ const CharacterForm = ({ API_Url }) => {
     const API = `http://localhost:8080/form?_id=${selectedCharacter}`;
     const res = await axios.get(API);
     setCurrentCharacter(res.data[0]);
+    setCharacterData(res.data[0]);
     console.log(res.data[0]);
+  }
+
+  async function updateCharacter(event) {
+    event.preventDefault();
+    const API = `http://localhost:8080/form/${selectedCharacter}`;
+    await axios.put(API, characterData);
+    console.log(characterData);
+    setCharacterData(characterData);
+    getCharacter();
   }
 
   function onChangeSelect(event) {
@@ -245,7 +255,7 @@ const CharacterForm = ({ API_Url }) => {
         </select>
         <button onClick={getCharacter}>Select</button>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={selectedCharacter ? updateCharacter : handleSubmit}>
         <main id="character-main">
           <div className="form-component">
             <h2>Create a Character:</h2>
@@ -399,7 +409,7 @@ const CharacterForm = ({ API_Url }) => {
           </div>
         </main>
 
-        <button id="formbtn">Submit</button>
+        <button id="formbtn">{selectedCharacter ? "Update" : "Submit"}</button>
       </form>
     </>
   );
