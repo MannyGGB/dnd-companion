@@ -1,8 +1,8 @@
 import "../CSS/home.css";
-import DnD_comp_Manny from "./Public/DnD_comp_Manny";
-import DnD_comp_Max from "./Public/DnD_comp_Max";
-import DnD_comp_Nellie from "./Public/DnD_comp_Nellie";
-import DnD_comp_Stephen from "./Public/DnD_comp_Stephen";
+import DnD_comp_Manny from "../images/DnD_comp_Manny";
+import DnD_comp_Max from "../images/DnD_comp_Max";
+import DnD_comp_Nellie from "../images/DnD_comp_Nellie";
+import DnD_comp_Stephen from "../images/DnD_comp_Stephen";
 
 export default function Home({ API_Url }) {
 	return (
