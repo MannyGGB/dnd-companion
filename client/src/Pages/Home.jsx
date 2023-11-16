@@ -16,7 +16,11 @@ export default function Home({ API_Url }) {
 				<ol>
 					<li>Log in and create a Profile.</li>
 					<li>Watch the video below to get an understanding of DnD.</li>
-					<li>Go to Character Creation page to create your character.</li>
+					<li>
+						Head to the character creation page below to create your character,
+						and to the journal page to keep a log of what matters to you in the
+						game.
+					</li>
 					<li>
 						Check out a list of spells{" "}
 						<a href="http://dnd5e.wikidot.com/spells">here.</a>

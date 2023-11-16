@@ -1,48 +1,50 @@
 #character-main {
-  height: 100%;
-  justify-content: space-evenly;
-  text-align: left;
-  padding-top: 6vh;
-  padding-bottom: 4vh;
+	height: 100%;
+	justify-content: space-evenly;
+	text-align: left;
+	padding-top: 6vh;
+	padding-bottom: 4vh;
 }
 
 h2 {
-  text-align: center;
+	text-align: center;
 }
 
 label {
-  display: block;
-  width: 140px;
+	display: block;
+	width: 140px;
 }
 
 input {
-  width: 200px;
-  display: inline-block;
+	width: 200px;
+	display: inline-block;
 }
 
 .form-component {
-  min-height: 66vh;
-  width: 80vw;
-  margin: 1rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+	min-height: 66vh;
+	width: 80vw;
+	margin: 1rem auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 #formbtn {
-  position: absolute;
-  bottom: 80px;
+	bottom: 80px;
 }
 
 .character-select {
-  position: absolute;
-  top: 60px;
-  left: 80px;
+	top: 60px;
+	left: 80px;
 }
 
 .ability-div {
-  display: flex;
-  width: 70%;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+	display: flex;
+	width: 70%;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+}
+
+#greeting {
+	font-size: 25px;
 }
