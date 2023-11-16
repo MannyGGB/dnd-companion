@@ -19,7 +19,10 @@ export default function Profile({ API_Url }) {
 			)}
 			{!isAuthenticated && (
 				<div className="profile">
-					<p>Log in to your account to save and update your character!</p>
+					<p>
+						Log in to your account to save and update your character AND your
+						journal!
+					</p>
 					<LoginButton />
 				</div>
 			)}
