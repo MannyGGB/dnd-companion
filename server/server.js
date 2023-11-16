@@ -36,6 +36,31 @@ app.post("/form", async (request, response) => {
   }
 });
 
+app.put("/form/:id", async (request, response) => {
+  try {
+    const updatedCharacter = await Character.findByIdAndUpdate(
+      request.params.id,
+      request.body
+    );
+    response.json(updatedCharacter);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json("500 Internal Server Error");
+  }
+});
+
+app.delete("/form/:id", async (request, response) => {
+  try {
+    const deletedCharacter = await Character.findByIdAndDelete(
+      request.params.id
+    );
+    response.json(deletedCharacter);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json("500 Internal Server Error");
+  }
+});
+
 app.get("/form/races", async (request, response) => {
   try {
     const API = `https://api.open5e.com/v1/races/?format=json`;
