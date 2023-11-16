@@ -17,11 +17,11 @@ A Dungeons and Dragons (D and D) companion app, suitable for users with no knowl
 
 ## Our web request response cycle
 
-![Web request response cycle](WRRC.png)
+![Web request response cycle](https://imgur.com/a/U6zclvs)
 
 ## Our wireframe
 
-![Wireframe](Wireframe.png)
+![Wireframe](https://imgur.com/a/lnGWHX6)
 
 ## The overall problem domain and how the project solves those problems
 
@@ -73,11 +73,13 @@ These can be found in the folder ‘models’
 
 ## References
 
-- Google icons
-- Google fonts (we recognise that there is a GDPR issue surrounding google fonts and in the future we could revisit this area to improve the app from a data perspective)
+- Google icons (https://fonts.google.com/icons)
+- Google fonts (we recognise that there is a GDPR issue surrounding google fonts and in the future we could revisit this area to improve the app from a data perspective) (https://fonts.google.com/)
+- Favicon generator: (https://realfavicongenerator.net/)
 
 # We’d like to thank:
 
-- The team at Tech Educators(https://techeducators.co.uk/) for their unwavering support
+- The team at Tech Educators (https://techeducators.co.uk/) for their unwavering support
 - Google and ChatGPT for the plethora of information that helped guide our project
+- Anthony for his fab illustrations on our home page
 - https://dnd.wizards.com/ for creating Dungeons and Dragons - give a one-shot campaign a go if you haven’t already!
