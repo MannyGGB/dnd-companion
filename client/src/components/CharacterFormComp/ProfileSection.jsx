@@ -19,13 +19,13 @@ const ProfileSection = ({
   }, []);
 
   async function getRaces() {
-    const API = `http://localhost:8080/form/races`;
+    const API = `${API_Url}/form/races`;
     const res = await axios.get(API);
     setRaces(res.data);
   }
 
   async function getClasses() {
-    const API = `http://localhost:8080/form/classes`;
+    const API = `${API_Url}/form/classes`;
     const res = await axios.get(API);
     setClasses(res.data);
   }
