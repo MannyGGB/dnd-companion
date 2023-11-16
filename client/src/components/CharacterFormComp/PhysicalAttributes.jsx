@@ -22,147 +22,128 @@ const PhysicalAttributes = ({
 
   return (
     <div>
-      <label>
-        Armor Class:
-        <input
-          type="number"
-          defaultValue={
-            currentCharacter?.physicalAttributes
-              ? currentCharacter.physicalAttributes.armorClass
-              : armorClass
-          }
-          onChange={(e) =>
-            handleAttributeChange("armorClass", parseInt(e.target.value))
-          }
-        />
-      </label>
-      <label>
-        Initiative:
-        <input
-          type="number"
-          defaultValue={
-            currentCharacter?.physicalAttributes
-              ? currentCharacter.physicalAttributes.initiative
-              : initiative
-          }
-          onChange={(e) =>
-            handleAttributeChange("initiative", parseInt(e.target.value))
-          }
-        />
-      </label>
-      <label>
-        Speed:
-        <input
-          type="number"
-          defaultValue={
-            currentCharacter?.physicalAttributes
-              ? currentCharacter.physicalAttributes.speed
-              : speed
-          }
-          onChange={(e) =>
-            handleAttributeChange("speed", parseInt(e.target.value))
-          }
-        />
-      </label>
-      <label>
-        Current Hit Points:
-        <input
-          type="number"
-          defaultValue={
-            currentCharacter?.physicalAttributes
-              ? currentCharacter.physicalAttributes.currentHitPoints
-              : currentHitPoints
-          }
-          onChange={(e) =>
-            handleAttributeChange(
-              "currentHitPoints",
-              parseInt(e.target.value)
-            )
-          }
-        />
-      </label>
-      <label>
-        Maximum Hit Points:
-        <input
-          type="number"
-          defaultValue={
-            currentCharacter?.physicalAttributes
-              ? currentCharacter.physicalAttributes.maximumHitPoints
-              : maximumHitPoints
-          }
-          onChange={(e) =>
-            handleAttributeChange(
-              "maximumHitPoints",
-              parseInt(e.target.value)
-            )
-          }
-        />
-      </label>
-      <label>
-        Temporal Hit Points:
-        <input
-          type="number"
-          defaultValue={
-            currentCharacter?.physicalAttributes
-              ? currentCharacter.physicalAttributes.temporalHitPoints
-              : temporalHitPoints
-          }
-          onChange={(e) =>
-            handleAttributeChange(
-              "temporalHitPoints",
-              parseInt(e.target.value)
-            )
-          }
-        />
-      </label>
-      <label>
-        Hit Dice:
-        <input
-          type="number"
-          defaultValue={
-            currentCharacter?.physicalAttributes
-              ? currentCharacter.physicalAttributes.hitDice
-              : hitDice
-          }
-          onChange={(e) =>
-            handleAttributeChange("hitDice", parseInt(e.target.value))
-          }
-        />
-      </label>
-      <label>
-        Death Saves Success:
-        <input
-          type="number"
-          defaultValue={
-            currentCharacter?.physicalAttributes
-              ? currentCharacter.physicalAttributes.deathSavesSuccess
-              : deathSavesSuccess
-          }
-          onChange={(e) =>
-            handleAttributeChange(
-              "deathSavesSuccess",
-              parseInt(e.target.value)
-            )
-          }
-        />
-      </label>
-      <label>
-        Death Saves Fail:
-        <input
-          type="number"
-          defaultValue={
-            currentCharacter?.physicalAttributes
-              ? currentCharacter.physicalAttributes.deathSavesFail
-              : deathSavesFail
-          }
-          onChange={(e) =>
-            handleAttributeChange(
-              "deathSavesFail",
-              parseInt(e.target.value)
-            )
-          }
-        />
-      </label>
+      <label>Armor Class:</label>
+      <input
+        name="armorClass"
+        onChange={(e) =>
+          handleAttributeChange("armorClass", parseInt(e.target.value))
+        }
+        defaultValue={
+          currentCharacter?.physicalAttributes
+            ? currentCharacter.physicalAttributes.armorClass
+            : undefined
+        }
+      />
+
+      <label>Initiative:</label>
+      <input
+        type="number"
+        name="initiative"
+        onChange={(e) =>
+          handleAttributeChange("initiative", parseInt(e.target.value))
+        }
+        defaultValue={
+          currentCharacter?.physicalAttributes
+            ? currentCharacter.physicalAttributes.initiative
+            : undefined
+        }
+      />
+
+      <label>Speed:</label>
+      <input
+        type="number"
+        name="speed"
+        onChange={(e) =>
+          handleAttributeChange("speed", parseInt(e.target.value))
+        }
+        defaultValue={
+          currentCharacter?.physicalAttributes
+            ? currentCharacter.physicalAttributes.speed
+            : undefined
+        }
+      />
+
+      <label>Current Hit Points:</label>
+      <input
+        type="number"
+        name="currentHitPoints"
+        onChange={(e) =>
+          handleAttributeChange("currentHitPoints", parseInt(e.target.value))
+        }
+        defaultValue={
+          currentCharacter?.physicalAttributes
+            ? currentCharacter.physicalAttributes.currentHitPoints
+            : undefined
+        }
+      />
+
+      <label>Maximum Hit Points:</label>
+      <input
+        type="number"
+        name="maximumHitPoints"
+        onChange={(e) =>
+          handleAttributeChange("armorClass", parseInt(e.target.value))
+        }
+        defaultValue={
+          currentCharacter?.physicalAttributes
+            ? currentCharacter.physicalAttributes.maximumHitPoints
+            : undefined
+        }
+      />
+      <label>Temporal Hit Points:</label>
+      <input
+        type="number"
+        name="temporalHitPoints"
+        onChange={(e) =>
+          handleAttributeChange("temporalHitPoints", parseInt(e.target.value))
+        }
+        defaultValue={
+          currentCharacter?.physicalAttributes
+            ? currentCharacter.physicalAttributes.temporalHitPoints
+            : undefined
+        }
+      />
+      <label>Hit Dice:</label>
+      <input
+        type="number"
+        name="hitDice"
+        onChange={(e) =>
+          handleAttributeChange("hitDice", parseInt(e.target.value))
+        }
+        defaultValue={
+          currentCharacter?.physicalAttributes
+            ? currentCharacter.physicalAttributes.hitDice
+            : undefined
+        }
+      />
+
+      <label>Death Saves Success:</label>
+      <input
+        type="number"
+        name="deathSavesSuccess"
+        onChange={(e) =>
+          handleAttributeChange("deathSavesSuccess", parseInt(e.target.value))
+        }
+        defaultValue={
+          currentCharacter?.physicalAttributes
+            ? currentCharacter.physicalAttributes.deathSavesSuccess
+            : undefined
+        }
+      />
+
+      <label>Death Saves Fail:</label>
+      <input
+        type="number"
+        name="deathSavesFail"
+        onChange={(e) =>
+          handleAttributeChange("deathSavesFail", parseInt(e.target.value))
+        }
+        defaultValue={
+          currentCharacter?.physicalAttributes
+            ? currentCharacter.physicalAttributes.deathSavesFail
+            : undefined
+        }
+      />
     </div>
   );
 };
