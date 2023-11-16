@@ -37,7 +37,7 @@ const AbilityScores = ({
             ? currentCharacter.abilityScores.dexterity
             : dexterity}
         </span>
-        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
+        <button onClick={(e) => rollAbilityScore(e, "dexterity")}>Roll</button>
       </div>
       <div className="ability-div">
         <span>
@@ -46,7 +46,7 @@ const AbilityScores = ({
             ? currentCharacter.abilityScores.constitution
             : constitution}
         </span>
-        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
+        <button onClick={(e) => rollAbilityScore(e, "constitution")}>Roll</button>
       </div>
       <div className="ability-div">
         <span>
@@ -55,7 +55,7 @@ const AbilityScores = ({
             ? currentCharacter.abilityScores.intelligence
             : intelligence}
         </span>
-        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
+        <button onClick={(e) => rollAbilityScore(e, "intelligence")}>Roll</button>
       </div>
       <div className="ability-div">
         <span>
@@ -64,7 +64,7 @@ const AbilityScores = ({
             ? currentCharacter.abilityScores.wisdom
             : wisdom}
         </span>
-        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
+        <button onClick={(e) => rollAbilityScore(e, "wisdom")}>Roll</button>
       </div>
       <div className="ability-div">
         <span>
@@ -73,7 +73,7 @@ const AbilityScores = ({
             ? currentCharacter.abilityScores.charisma
             : charisma}
         </span>
-        <button onClick={(e) => rollAbilityScore(e, "strength")}>Roll</button>
+        <button onClick={(e) => rollAbilityScore(e, "charisma")}>Roll</button>
       </div>
     </div>
   );
