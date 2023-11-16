@@ -63,7 +63,7 @@ export default function Home({ API_Url }) {
 					<div className="team-member">
 						<img
 							className="team-image"
-							src="./Public/DnD_comp_Stephen.png"
+							src="/Public/DnD_comp_Stephen.png"
 							alt="Stephen"
 						/>
 						<a href="https://github.com/sage-code82">Stephen</a>
