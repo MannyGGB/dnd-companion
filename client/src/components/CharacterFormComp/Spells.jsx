@@ -1,4 +1,4 @@
-const Spells = ({ spells, handleSpellsChange }) => {
+const Spells = ({ spells, handleSpellsChange, currentCharacter }) => {
   const handleSpellChange = (index, field, value) => {
     const updatedSpells = [...spells];
     updatedSpells[index][field] = value;
@@ -18,32 +18,66 @@ const Spells = ({ spells, handleSpellsChange }) => {
 
   return (
     <div>
-      {spells.map((spell, index) => (
-        <div key={index}>
-          <label>
-            Spell Name:
-            <input
-              type="text"
-              value={spell.spellName}
-              onChange={(e) =>
-                handleSpellChange(index, "spellName", e.target.value)
-              }
-            />
-          </label>
-          <label>
-            Spell Level:
-            <input
-              type="number"
-              value={spell.spellLevel}
-              onChange={(e) =>
-                handleSpellChange(index, "spellLevel", parseInt(e.target.value))
-              }
-            />
-          </label>
-          <button onClick={(e) => removeSpell(index)}>Remove</button>
-        </div>
-      ))}
-      <button onClick={addNewSpell}>Add Spell</button>
+      {currentCharacter?.profile &&
+        currentCharacter.spells.map((spell, index) => (
+          <div key={index}>
+            <label>
+              My Spell:
+              <input
+                type="text"
+                value={spell.spellName}
+                onChange={(e) =>
+                  handleSpellChange(index, "spellName", e.target.value)
+                }
+              />
+            </label>
+            <label>
+              Spell Level:
+              <input
+                type="number"
+                value={spell.spellLevel}
+                onChange={(e) =>
+                  handleSpellChange(
+                    index,
+                    "spellLevel",
+                    parseInt(e.target.value)
+                  )
+                }
+              />
+            </label>
+          </div>
+        ))}
+      {spells.spellLevel &&
+        spells.map((spell, index) => (
+          <div key={index}>
+            <label>
+              Spell Name:
+              <input
+                type="text"
+                value={spell.spellName}
+                onChange={(e) =>
+                  handleSpellChange(index, "spellName", e.target.value)
+                }
+              />
+            </label>
+            <label>
+              Spell Level:
+              <input
+                type="number"
+                value={spell.spellLevel}
+                onChange={(e) =>
+                  handleSpellChange(
+                    index,
+                    "spellLevel",
+                    parseInt(e.target.value)
+                  )
+                }
+              />
+            </label>
+            <button onClick={(e) => removeSpell(index)}>Remove</button>
+          </div>
+        ))}
+      <button onClick={addNewSpell}>Add New Spell</button>
     </div>
   );
 };

@@ -10,19 +10,19 @@ body {
 }
 
 #app-title {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 main {
-	height: 100vh;
-	max-width: 400px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin: 1rem auto;
-	text-align: center;
-	padding-top: 8vh;
-	padding-bottom: 12vh;
+  height: 150%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem auto;
+  text-align: center;
+  padding-top: 8vh;
+  padding-bottom: 12vh;
 }
 
 #dice-button {
@@ -71,11 +71,11 @@ body {
 }
 
 #top-bar-link {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 3rem;
-	text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  text-decoration: none;
 }
 
 .NavBar {
