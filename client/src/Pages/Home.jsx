@@ -1,4 +1,8 @@
 import "../CSS/home.css";
+import DnD_comp_Manny from "./Public/DnD_comp_Manny";
+import DnD_comp_Max from "./Public/DnD_comp_Max";
+import DnD_comp_Nellie from "./Public/DnD_comp_Nellie";
+import DnD_comp_Stephen from "./Public/DnD_comp_Stephen";
 
 export default function Home({ API_Url }) {
 	return (
@@ -36,36 +40,20 @@ export default function Home({ API_Url }) {
 				<h3>The team</h3>
 				<div className="members">
 					<div className="team-member">
-						<img
-							className="team-image"
-							src="./Public/DnD_comp_Manny.png"
-							alt="Manny"
-						/>
+						<img className="team-image" src={DnD_comp_Manny} alt="Manny" />
 						<a href="https://github.com/mannyggb">Manny</a>
 					</div>
 					<div className="team-member">
-						<img
-							className="team-image"
-							src="./Public/DnD_comp_Max.png"
-							alt="Max"
-						/>
+						<img className="team-image" src={DnD_comp_Max} alt="Max" />
 						<a href="https://github.com/maxpollock">Max</a>
 					</div>
 
 					<div className="team-member">
-						<img
-							className="team-image"
-							src="./Public/DnD_comp_Nellie.png"
-							alt="Nellie"
-						/>
+						<img className="team-image" src={DnD_comp_Nellie} alt="Nellie" />
 						<a href="https://github.com/nellie-allsop">Nellie</a>
 					</div>
 					<div className="team-member">
-						<img
-							className="team-image"
-							src="/Public/DnD_comp_Stephen.png"
-							alt="Stephen"
-						/>
+						<img className="team-image" src={DnD_comp_Stephen} alt="Stephen" />
 						<a href="https://github.com/sage-code82">Stephen</a>
 					</div>
 				</div>
