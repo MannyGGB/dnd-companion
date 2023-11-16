@@ -75,7 +75,7 @@ export default function Journal({ API_Url }) {
 
       {submissions.map((sub) => (
         <div className="submissions">
-          <h3>{sub.date}</h3>
+          <h3>Session Date: {sub.date}</h3>
           <p>{sub.text}</p>
           <button onClick={handleOpen}>Edit</button>
           <button onClick={() => deleteSubmission(sub._id)}>Delete</button>
