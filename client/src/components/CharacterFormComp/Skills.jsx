@@ -12,7 +12,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("acrobatics", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.acrobatics : undefined
           }
         />
@@ -27,7 +27,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
               parseInt(e.target.value)
             )
           }
-          value={
+          defaultValue={
             currentCharacter?.skills
               ? currentCharacter.skills.animalHandling
               : undefined
@@ -41,7 +41,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("arcana", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.arcana : undefined
           }
         />
@@ -53,7 +53,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("athletics", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.athletics : undefined
           }
         />
@@ -65,7 +65,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("deception", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.deception : undefined
           }
         />
@@ -77,7 +77,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("history", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.history : undefined
           }
         />
@@ -89,7 +89,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("insight", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.insight : undefined
           }
         />
@@ -104,7 +104,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
               parseInt(e.target.value)
             )
           }
-          value={
+          defaultValue={
             currentCharacter?.skills
               ? currentCharacter.skills.intimidation
               : undefined
@@ -121,7 +121,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
               parseInt(e.target.value)
             )
           }
-          value={
+          defaultValue={
             currentCharacter?.skills
               ? currentCharacter.skills.investigation
               : undefined
@@ -135,7 +135,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("medicine", parseInt(e.target.value))
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.medicine : undefined
           }
         />
@@ -147,7 +147,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("nature", parseInt(e.target.value) || 0)
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.nature : undefined
           }
         />
@@ -159,7 +159,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("perception", parseInt(e.target.value) || 0)
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.perception : undefined
           }
         />
@@ -171,7 +171,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("performance", parseInt(e.target.value) || 0)
           }
-          value={
+          defaultValue={
             currentCharacter?.skills
               ? currentCharacter.skills.performance
               : undefined
@@ -185,7 +185,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("persuasion", parseInt(e.target.value) || 0)
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.persuasion : undefined
           }
         />
@@ -197,7 +197,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("religion", parseInt(e.target.value) || 0)
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.religion : undefined
           }
         />
@@ -212,7 +212,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
               parseInt(e.target.value) || 0
             )
           }
-          value={
+          defaultValue={
             currentCharacter?.skills
               ? currentCharacter.skills.sleightOfHand
               : undefined
@@ -226,7 +226,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("stealth", parseInt(e.target.value) || 0)
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.stealth : undefined
           }
         />
@@ -238,7 +238,7 @@ const Skills = ({ API_Url, handleSkillsChange, currentCharacter }) => {
           onChange={(e) =>
             handleSkillValueChange("survival", parseInt(e.target.value) || 0)
           }
-          value={
+          defaultValue={
             currentCharacter?.skills ? currentCharacter.skills.survival : undefined
           }
         />

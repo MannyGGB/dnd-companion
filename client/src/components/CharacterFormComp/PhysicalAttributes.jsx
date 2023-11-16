@@ -26,7 +26,7 @@ const PhysicalAttributes = ({
         Armor Class:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.physicalAttributes
               ? currentCharacter.physicalAttributes.armorClass
               : armorClass
@@ -40,7 +40,7 @@ const PhysicalAttributes = ({
         Initiative:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.physicalAttributes
               ? currentCharacter.physicalAttributes.initiative
               : initiative
@@ -54,7 +54,7 @@ const PhysicalAttributes = ({
         Speed:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.physicalAttributes
               ? currentCharacter.physicalAttributes.speed
               : speed
@@ -68,7 +68,7 @@ const PhysicalAttributes = ({
         Current Hit Points:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.physicalAttributes
               ? currentCharacter.physicalAttributes.currentHitPoints
               : currentHitPoints
@@ -85,7 +85,7 @@ const PhysicalAttributes = ({
         Maximum Hit Points:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.physicalAttributes
               ? currentCharacter.physicalAttributes.maximumHitPoints
               : maximumHitPoints
@@ -102,7 +102,7 @@ const PhysicalAttributes = ({
         Temporal Hit Points:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.physicalAttributes
               ? currentCharacter.physicalAttributes.temporalHitPoints
               : temporalHitPoints
@@ -119,7 +119,7 @@ const PhysicalAttributes = ({
         Hit Dice:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.physicalAttributes
               ? currentCharacter.physicalAttributes.hitDice
               : hitDice
@@ -133,7 +133,7 @@ const PhysicalAttributes = ({
         Death Saves Success:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.physicalAttributes
               ? currentCharacter.physicalAttributes.deathSavesSuccess
               : deathSavesSuccess
@@ -150,7 +150,7 @@ const PhysicalAttributes = ({
         Death Saves Fail:
         <input
           type="number"
-          value={
+          defaultValue={
             currentCharacter?.physicalAttributes
               ? currentCharacter.physicalAttributes.deathSavesFail
               : deathSavesFail

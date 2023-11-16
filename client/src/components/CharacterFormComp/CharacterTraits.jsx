@@ -10,7 +10,7 @@ const CharacterTraits = ({ API_Url, handleTraitsChange, currentCharacter }) => {
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("languages", e.target.value)}
-          value={
+          defaultValue={
             currentCharacter?.traits ? currentCharacter.traits.languages : undefined
           }
         />
@@ -22,7 +22,7 @@ const CharacterTraits = ({ API_Url, handleTraitsChange, currentCharacter }) => {
           onChange={(e) =>
             handleTraitValueChange("proficiencies", e.target.value)
           }
-          value={
+          defaultValue={
             currentCharacter?.traits
               ? currentCharacter.traits.proficiencies
               : undefined
@@ -36,7 +36,7 @@ const CharacterTraits = ({ API_Url, handleTraitsChange, currentCharacter }) => {
           onChange={(e) =>
             handleTraitValueChange("personality", e.target.value)
           }
-          value={
+          defaultValue={
             currentCharacter?.traits
               ? currentCharacter.traits.personality
               : undefined
@@ -48,7 +48,7 @@ const CharacterTraits = ({ API_Url, handleTraitsChange, currentCharacter }) => {
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("ideals", e.target.value)}
-          value={
+          defaultValue={
             currentCharacter?.traits ? currentCharacter.traits.ideals : undefined
           }
         />
@@ -58,7 +58,7 @@ const CharacterTraits = ({ API_Url, handleTraitsChange, currentCharacter }) => {
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("bonds", e.target.value)}
-          value={
+          defaultValue={
             currentCharacter?.traits ? currentCharacter.traits.bonds : undefined
           }
         />
@@ -68,7 +68,7 @@ const CharacterTraits = ({ API_Url, handleTraitsChange, currentCharacter }) => {
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("flaws", e.target.value)}
-          value={
+          defaultValue={
             currentCharacter?.traits ? currentCharacter.traits.flaws : undefined
           }
         />
@@ -78,7 +78,7 @@ const CharacterTraits = ({ API_Url, handleTraitsChange, currentCharacter }) => {
         <input
           type="text"
           onChange={(e) => handleTraitValueChange("features", e.target.value)}
-          value={
+          defaultValue={
             currentCharacter?.traits ? currentCharacter.traits.features : undefined
           }
         />
