@@ -57,7 +57,7 @@ We would recommend that you open this app on your phone, as it has been turned i
 
 ## Accessibility
 
-(Lighthouse report)
+Please contact one of the project contributors if you would like a screenshot of our lighthouse report
 
 ## Clearly defined API endpoints with sample responses
 

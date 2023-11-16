@@ -8,25 +8,25 @@ import Journal from "./Pages/Journal";
 import Profile from "./Pages/Profile";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-const API_Url = import.meta.env.VITE_SERVER_URL || "http://localhost:8080";
+const API_Url = "http://localhost:8080" || import.meta.env.VITE_SERVER_URL;
 
 function App() {
-  console.log(API_Url);
-  return (
-    <BrowserRouter>
-      <TopBar />
+	console.log(API_Url);
+	return (
+		<BrowserRouter>
+			<TopBar />
 
-      <Routes>
-        <Route path="/" element={<Home API_Url={API_Url} />} />
-        <Route path="/character" element={<Character API_Url={API_Url} />} />
-        <Route path="/dice" element={<Dice API_Url={API_Url} />} />
-        <Route path="/journal" element={<Journal API_Url={API_Url} />} />
-        <Route path="/profile" element={<Profile API_Url={API_Url} />} />
-      </Routes>
+			<Routes>
+				<Route path="/" element={<Home API_Url={API_Url} />} />
+				<Route path="/character" element={<Character API_Url={API_Url} />} />
+				<Route path="/dice" element={<Dice API_Url={API_Url} />} />
+				<Route path="/journal" element={<Journal API_Url={API_Url} />} />
+				<Route path="/profile" element={<Profile API_Url={API_Url} />} />
+			</Routes>
 
-      <NavBar />
-    </BrowserRouter>
-  );
+			<NavBar />
+		</BrowserRouter>
+	);
 }
 
 export default App;
