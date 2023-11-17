@@ -11,7 +11,7 @@ export default function Character({ API_Url }) {
 			{isAuthenticated && (
 				<div>
 					<p id="greeting">Hello {user.given_name}!</p>
-					<CharacterForm />
+					<CharacterForm API_Url={API_Url} />
 				</div>
 			)}
 			{!isAuthenticated && (
