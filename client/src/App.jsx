@@ -8,7 +8,7 @@ import Journal from "./Pages/Journal";
 import Profile from "./Pages/Profile";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-const API_Url = "http://localhost:8080" || import.meta.env.VITE_SERVER_URL;
+const API_Url = import.meta.env.VITE_SERVER_URL || "http://localhost:8080";
 
 function App() {
 	console.log(API_Url);
